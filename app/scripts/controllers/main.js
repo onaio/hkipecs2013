@@ -136,8 +136,6 @@
         $scope.spGrid = {data: 'sp',
             columnDefs: [{field:'milieu_sp', displayName:'Sous-Prefecture'}, {field:'count', displayName:'# Surveys'}]
         };
-
-
     }]);
 
     pecsApp.controller('akwaibommCtrl', [ "$scope", "$http", "OnadataService", function ($scope, $http, ona) {
@@ -183,7 +181,6 @@
         $scope.villagelgaGrid = {data: 'villagelga',
             columnDefs: [{field:'village_lga', displayName:'Village LGA'}, {field:'count', displayName:'# Surveys'}]
         };
-
     }]);
 
     pecsApp.controller('benueCtrl', [ "$scope", "$http", "OnadataService", function ($scope, $http, ona) {

@@ -1,52 +1,75 @@
 
-<br><br>
-<h3><i class="glyphicon glyphicon-"></i>  {{country}}</h3>
-
-<div class="clearfix">
-    <h4>Surveys by Date of Interview</h4>
-    <div class="col-md-6">
-        <!-- <div class="gridStyle" ng-grid="dayofinterviewGrid"></div> -->
-        <table ng-table class="table table-bordered">
-        <tr ng-repeat="day in dayofinterview">
-        	<td data-title="Date of Interview">{{ day.date_interview }}</td>
-        	<td data-title="No. of Surveys">{{ day.count }}</td>
-        </tr>
-        </table>
-    </div>
-    <div class="col-md-6">
-        
-    </div>
+<br/><br/>
+<h3 class="area-txt"><i class="glyphicon glyphicon-map-marker"></i>  {{country}}</h3>
+<br/>
+<div class="panel panel-default">
+	<div class="panel-heading">Surveys by Date of Interview</div>
+	<div class="panel-body">
+	    <div class="col-md-6">
+	        <table ng-table="tableParams" class="table table-bordered" class="datatable">
+	        <tr ng-repeat="day in dayofinterview">
+	        	<td data-title="Date of Interview">{{ day.date_interview }}</td>
+	        	<td data-title="No. of Surveys">{{ day.count }}</td>
+	        </tr>
+	        </table>
+	    </div>
+	    <div class="col-md-6">
+	        
+	    </div>
+	</div>
 </div>
 
-<div class="clearfix">
-    <h4>Surveys by Interviewer</h4>
-    <div class="col-md-6">
-        <div class="gridStyle" ng-grid="interviewerGrid"></div>
-    </div>
-    <div class="col-md-6">
-        
-    </div>
+<div class="panel panel-default">
+	<div class="panel-heading">Surveys by Interviewer</div>
+	<div class="panel-body">
+	    <div class="col-md-6">
+	        <table ng-table class="table table-bordered" class="datatable">
+	        <tr ng-repeat="intr in interviewer">
+	        	<td data-title="Interviewer">{{ intr.interviewer_name }}</td>
+	        	<td data-title="No. of Surveys">{{ intr.count }}</td>
+	        </tr>
+	        </table>
+	    </div>
+	    <div class="col-md-6">
+	        
+	    </div>
+	</div>
 </div>
 
-<div class="clearfix">
-    <h4>Surveys by Village</h4>
-    <div class="col-md-6">
-        <div class="gridStyle" ng-grid="villageGrid"></div>
-    </div>
-    <div class="col-md-6">
-        
-    </div>
+<div class="panel panel-default">
+	<div class="panel-heading">Surveys by Village</div>
+	<div class="panel-body">
+	    <div class="col-md-6">
+	        <table ng-table class="table table-bordered" class="datatable">
+	        <tr ng-repeat="vlg in village">
+	        	<td data-title="Village">{{ vlg.village }}</td>
+	        	<td data-title="No. of Surveys">{{ vlg.count }}</td>
+	        </tr>
+	        </table>
+	    </div>
+	    <div class="col-md-6">
+	        
+	    </div>
+	</div>
 </div>
 
-<div class="clearfix">
-    <h4>Surveys by Village LGA</h4>
-    <div class="col-md-6">
-        <div class="gridStyle" ng-grid="villagelgaGrid"></div>
-    </div>
-    <div class="col-md-6">
-        
-    </div>
+<div class="panel panel-default">
+	<div class="panel-heading">Surveys by Village LGA</div>
+	<div class="panel-body">
+	    <div class="col-md-6">
+	        <table ng-table class="table table-bordered" class="datatable">
+	        <tr ng-repeat="vlga in village">
+	        	<td data-title="Village LGA">{{ vlga.village }}</td>
+	        	<td data-title="No. of Surveys">{{ vlga.count }}</td>
+	        </tr>
+	        </table>
+	    </div>
+	    <div class="col-md-6">
+	        
+		</div>
+	</div>
 </div>
+
 <div class="footer">
     <p>&copy; Helen Keller International, 2013</p>
 </div>
