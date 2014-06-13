@@ -40,10 +40,10 @@ table{
     padding:1.5em 1em;
  }
 .logoholder{
-    border-left:1px solid #808080;
+/*    border-left:1px solid #808080;*/
 	height:auto!important;
     padding-top:0.7em!important;
-    padding-left:1em;
+/*    padding-left:1em;*/
 }
 
 /* Custom page footer */
