@@ -5,7 +5,13 @@
 <div class="clearfix">
     <h4>Surveys by Date of Interview</h4>
     <div class="col-md-6">
-        <div class="gridStyle" ng-grid="dayofinterviewGrid"></div>
+        <!-- <div class="gridStyle" ng-grid="dayofinterviewGrid"></div> -->
+        <table ng-table class="table table-bordered">
+        <tr ng-repeat="day in dayofinterview">
+        	<td data-title="Date of Interview">{{ day.date_interview }}</td>
+        	<td data-title="No. of Surveys">{{ day.count }}</td>
+        </tr>
+        </table>
     </div>
     <div class="col-md-6">
         
@@ -41,7 +47,6 @@
         
     </div>
 </div>
-
 <div class="footer">
     <p>&copy; Helen Keller International, 2013</p>
 </div>
