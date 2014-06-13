@@ -1,23 +1,46 @@
 
 <br><br>
-<h3>{{country}}</h3>
+<h3><i class="glyphicon glyphicon-"></i>  {{country}}</h3>
 
+<div class="clearfix">
+    <h4>Surveys by Date of Interview</h4>
+    <div class="col-md-6">
+        <div class="gridStyle" ng-grid="dayofinterviewGrid"></div>
+    </div>
+    <div class="col-md-6">
+        
+    </div>
+</div>
 
-<h4>Surveys by Date of Interview</h4>
+<div class="clearfix">
+    <h4>Surveys by Interviewer</h4>
+    <div class="col-md-6">
+        <div class="gridStyle" ng-grid="interviewerGrid"></div>
+    </div>
+    <div class="col-md-6">
+        
+    </div>
+</div>
 
-<div class="gridStyle" ng-grid="dayofinterviewGrid"></div>
+<div class="clearfix">
+    <h4>Surveys by Village</h4>
+    <div class="col-md-6">
+        <div class="gridStyle" ng-grid="villageGrid"></div>
+    </div>
+    <div class="col-md-6">
+        
+    </div>
+</div>
 
-<h4>Surveys by Interviewer</h4>
-
-<div class="gridStyle" ng-grid="interviewerGrid"></div>
-
-<h4>Surveys by Village</h4>
-
-<div class="gridStyle" ng-grid="villageGrid"></div>
-
-<h4>Surveys by Village LGA</h4>
-
-<div class="gridStyle" ng-grid="villagelgaGrid"></div>
+<div class="clearfix">
+    <h4>Surveys by Village LGA</h4>
+    <div class="col-md-6">
+        <div class="gridStyle" ng-grid="villagelgaGrid"></div>
+    </div>
+    <div class="col-md-6">
+        
+    </div>
+</div>
 
 <div class="footer">
     <p>&copy; Helen Keller International, 2013</p>
