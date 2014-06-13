@@ -36,3 +36,8 @@
                 });
         }]);
 })();
+
+/*configure active nav states*/
+$(".").click(function(){
+  
+});

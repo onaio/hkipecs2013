@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
@@ -6,18 +6,18 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title></title>
-<meta name="description" content="">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+<title>HKI PECs NIGERIA</title>
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link href="//fonts.googleapis.com/css?family=Open+Sans:400,700"/>
 
 <!-- build:css(.tmp) styles/main.css -->
 <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 <link rel="stylesheet" href="styles/ng-grid.css">
-<!--        <link rel="stylesheet" href="styles/main.css">-->
+        <link rel="stylesheet" href="styles/main.css">
 <!-- endbuild -->
 </head>
-  <body ng-app="hkipecsApp">
+<body ng-app="hkipecsApp">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -28,14 +28,21 @@
     <![endif]-->
 
     <!-- Docs master nav -->
-    <header class="navbar navbar-inverse navbar-fixed-top">
-        <div class="header-inner">
-			<div class="col-sm-5"><br/>
-				<span class="head-title"><strong>HKI PECS</strong> NIGERIA</span>
-			</div>
-			<div class="col-sm-5">
-				<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
-                <ul class="nav navbar-nav">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="header-inner container">
+            <div class="navbar-header headpad">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">
+                  <strong>HKI PECs</strong> NIGERIA
+                </a>
+            </div>
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav headpad">
                    <!-- <li>
                         <a href="#guinea">Guinea</a>
                     </li>
@@ -46,26 +53,22 @@
                     <li>
                         <a href="#cameroon">Cameroon</a>
                     </li> -->
-                    <li>
+                    <li class="active">
                         <a href="#akwaibomm">Akwa Ibomm</a>
                     </li>
                     <li>
                         <a href="#benue">Benue</a>
                     </li>
-
                 </ul>
-            </nav>
-			</div>
-
-			<div class="col-sm-2 logo-holder">
-				<!-- BEGIN LOGO -->
-				<a class="navbar-brand" href="index.html">
+                
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a class="navbar-brand logoholder" href="index.html">
 					<img src="img/hki-logotype.png" alt="logo" class="img-responsive">
-				</a>
-				<!-- END LOGO -->
+				</a></li>
+                </ul>
 			</div>
 		</div>
-    </header>
+    </div>
 
     <!-- Add your site or application content here -->
     <div class="container" ng-view="MainCtrl">
