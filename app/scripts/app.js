@@ -38,6 +38,8 @@
 })();
 
 /*configure active nav states*/
-$(".").click(function(){
-  
+var nav_lnk = ("#ctr_nav li");
+nav_lnk.click(function(){
+  nav_lnk.removeClass("active");
+  $(this).addClass("active");
 });
