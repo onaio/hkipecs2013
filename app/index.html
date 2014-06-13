@@ -3,19 +3,19 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title></title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <!-- build:css(.tmp) styles/main.css -->
-        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="styles/ng-grid.css">
-        <link rel="stylesheet" href="styles/main.css">
-        <!-- endbuild -->
+<!-- build:css(.tmp) styles/main.css -->
+<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="styles/ng-grid.css">
+<!--        <link rel="stylesheet" href="styles/main.css">-->
+<!-- endbuild -->
 </head>
   <body ng-app="hkipecsApp">
     <!--[if lt IE 7]>
@@ -28,18 +28,13 @@
     <![endif]-->
 
     <!-- Docs master nav -->
-    <header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
-        <div class="container">
-            <div class="navbar-header">
-                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a href="../" class="navbar-brand">HKI PECS Nigeria</a>
-            </div>
-            <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+    <header class="navbar navbar-inverse navbar-fixed-top">
+        <div class="header-inner">
+			<div class="col-sm-5"><br/>
+				<span class="head-title"><strong>HKI PECS</strong> NIGERIA</span>
+			</div>
+			<div class="col-sm-5">
+				<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
                 <ul class="nav navbar-nav">
                    <!-- <li>
                         <a href="#guinea">Guinea</a>
@@ -60,7 +55,16 @@
 
                 </ul>
             </nav>
-        </div>
+			</div>
+
+			<div class="col-sm-2 logo-holder">
+				<!-- BEGIN LOGO -->
+				<a class="navbar-brand" href="index.html">
+					<img src="img/hki-logotype.png" alt="logo" class="img-responsive">
+				</a>
+				<!-- END LOGO -->
+			</div>
+		</div>
     </header>
 
     <!-- Add your site or application content here -->

@@ -13,15 +13,25 @@ body {
 }
 
 /* Custom page header */
-.header {
-  background: 1px solid #545454;
+.header.navbar{
+	background:#545454;
+	color:#FFFFFF;
 }
-/* Make the masthead heading the same height as the navigation */
-.header h3 {
-  margin-top: 0;
-  margin-bottom: 0;
-  line-height: 40px;
-  padding-bottom: 19px;
+.header-inner .col-sm-5, .header-inner .col-sm-8{
+	padding:1em 1em 1em 2em;
+}
+.header-inner .col-sm-2{
+	padding:1em 0;
+}
+.head-title{
+	font-size:1.2em;
+	text-transform:uppercase;
+}
+.logo-holder{
+	border-left:1px solid #808080;
+}
+.navbar-brand img{
+	margin-left:2em;
 }
 
 /* Custom page footer */
