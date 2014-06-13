@@ -1,4 +1,5 @@
 body{
+	background:#F7F7F7;
 	font-family:'Open Sans', sans-serif!important;
     padding-top:3em;
 }
@@ -6,7 +7,11 @@ body{
 strong{ font-weight:700; }
 
 table{
-    min-height:5em
+    min-height:5em;
+}
+table tr th{
+	text-align:left!important;
+	width:50%!important;
 }
 
 .area-txt{
