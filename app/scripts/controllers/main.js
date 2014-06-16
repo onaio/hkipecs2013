@@ -156,8 +156,8 @@
             site: 'ona.io'
         };
         query.name = 'date_interview';
-        
         $scope.interviewData = ona.query(query);
+        //alert($scope.interviewData.length);
 
         query.group = 'consent_group/interviewer_name';
         query.name = 'interviewer_name';

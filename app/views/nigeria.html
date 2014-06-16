@@ -5,7 +5,7 @@
 
 
 <ul class="nav nav-tabs">
-  <li class="active"><a href="#dateofinterview" data-toggle="tab">Survey by Date of Interview</a></li>
+  <li class="active"><a href="#dateinterview" data-toggle="tab">Survey by Date of Interview</a></li>
   <li><a href="#byinterviewer" data-toggle="tab">Survey by Interviewer</a></li>
   <li><a href="#village" data-toggle="tab">Survey by Villages</a></li>
   <li><a href="#villagelga" data-toggle="tab">Survey by Village LGA</a></li>
@@ -13,7 +13,7 @@
 
 <!-- Tab panes -->
 <div class="tab-content clearfix">
-  <div class="tab-pane active clearfix" id="dateofinterview">
+  <div class="tab-pane active clearfix" id="dateinterview">
   	<div class="col-md-6">
         <table class="table table-bordered" si-table>
         <tr>
@@ -32,17 +32,17 @@
   </div>
   <div class="tab-pane" id="byinterviewer">
   	<div class="col-md-6">
-        <table ng-table="tableParams" class="table table-bordered">
+        <table class="table table-bordered" si-table>
         <thead>
        	<tr>
-        	<th>Interviewer</th>
-        	<th>No. of Surveys</th>
+        	<th sort-by="interviewer">Interviewer</th>
+        	<th sort-by="count">No. of Surveys</th>
         </tr>
         </thead>
         <tbody>
         <tr ng-repeat="intr in interviewer">
-        	<td data-title="Interviewer" sortable="interviewer_name">{{ intr.interviewer_name }}</td>
-        	<td data-title="No. of Surveys" sortable="count">{{ intr.count }}</td>
+        	<td>{{ intr.interviewer_name }}</td>
+        	<td>{{ intr.count }}</td>
         </tr>
         </tbody>
         </table>
@@ -53,17 +53,17 @@
   </div>
   <div class="tab-pane" id="village">
     <div class="col-md-6">
-        <table ng-table class="table table-bordered datatable">
+        <table class="table table-bordered" si-table>
         <thead>
        	<tr>
-        	<th>Village</th>
-        	<th>No. of Surveys</th>
+        	<th sort-by="village">Village</th>
+        	<th sort-by="count">No. of Surveys</th>
         </tr>
         </thead>
         <tbody>
         <tr ng-repeat="vlg in village">
-        	<td data-title="Village">{{ vlg.village }}</td>
-        	<td data-title="No. of Surveys">{{ vlg.count }}</td>
+        	<td>{{ vlg.village }}</td>
+        	<td>{{ vlg.count }}</td>
         </tr>
         </tbody>
         </table>
@@ -74,17 +74,17 @@
   </div>
   <div class="tab-pane" id="villagelga">
   	<div class="col-md-6">
-        <table ng-table class="table table-bordered datatable">
+        <table class="table table-bordered" si-table>
         <thead>
        	<tr>
-        	<th>Village LGA</th>
-        	<th>No. of Surveys</th>
+        	<th sort-by="village_lga">Village LGA</th>
+        	<th sort-by="count">No. of Surveys</th>
         </tr>
         </thead>
         <tbody>
         <tr ng-repeat="vlga in village">
-        	<td data-title="Village LGA">{{ vlga.village }}</td>
-        	<td data-title="No. of Surveys">{{ vlga.count }}</td>
+        	<td>{{ vlga.village_lga }}</td>
+        	<td>{{ vlga.count }}</td>
         </tr>
         </tbody>
         </table>
