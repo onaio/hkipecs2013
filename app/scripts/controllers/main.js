@@ -156,7 +156,6 @@
             site: 'ona.io'
         };
         query.name = 'date_interview';
-        // $scope.dayofinterview = ona.query(query);
         
         $scope.interviewData = ona.query(query);
         
@@ -171,7 +170,7 @@
 	        total: $scope.interviewData.length, // length of data
 	        getData: function($defer, params) {
 	            // use build-in angular filter
-	            var orderedData = params.sorting() ?
+	            var orderedData = params.sorting() ? 
 	                                $filter('orderBy')($scope.interviewData, params.orderBy()) :
 	                                $scope.interviewData;
 	            $defer.resolve(orderedData.slice((params.page() - 1) * params.count(), params.page() * params.count()));
