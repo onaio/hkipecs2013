@@ -52,11 +52,13 @@ table tr th{
 	height:auto!important;
     padding-top:0.7em!important;
 }
-/*.panel .panel-heading{
-	background:#777;
-	color:#FFFFFF;
-	font-weight:bold;
-}*/
+/*Tab content*/
+.tab-content{
+	background:#FFFFFF;
+	border-left:1px solid #DDD;
+	border-right:1px solid #DDD;
+	padding-top:1.6em;
+}
 
 /* Custom page footer */
 .footer{

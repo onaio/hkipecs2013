@@ -5,21 +5,24 @@
 
 
 <ul class="nav nav-tabs">
-  <li class="active"><a href="#dateofinterview" data-toggle="tab">Home</a></li>
-  <li><a href="#byinterviewer" data-toggle="tab">Profile</a></li>
-  <li><a href="#village" data-toggle="tab">Messages</a></li>
-  <li><a href="#villagelga" data-toggle="tab">Settings</a></li>
+  <li class="active"><a href="#dateofinterview" data-toggle="tab">Survey by Date of Interview</a></li>
+  <li><a href="#byinterviewer" data-toggle="tab">Survey by Interviewer</a></li>
+  <li><a href="#village" data-toggle="tab">Survey by Villages</a></li>
+  <li><a href="#villagelga" data-toggle="tab">Survey by Village LGA</a></li>
 </ul>
 
 <!-- Tab panes -->
 <div class="tab-content clearfix">
   <div class="tab-pane active clearfix" id="dateofinterview">
   	<div class="col-md-6">
-    	<p><strong>Sorting:</strong> {{tableParams.sorting()|json}}
-        <table ng-table="tableParams" class="table table-bordered">
+        <table class="table table-bordered" si-table>
+        <tr>
+        	<th sort-by="date_interview">Date of Interview</th>
+        	<th sort-by="count">No. of Surveys</th>
+        </tr>
         <tr ng-repeat="day in interviewData">
-        	<td data-title="'Date of Interview'" sortable="'date_interview'">{{ day.date_interview }}</td>
-        	<td data-title="'No. of Surveys'" sortable="'count'">{{ day.count }}</td>
+        	<td>{{ day.date_interview }}</td>
+        	<td>{{ day.count }}</td>
         </tr>
         </table>
     </div>

@@ -138,7 +138,7 @@
         };
     }]);
 
-    pecsApp.controller('akwaibommCtrl', [ "$scope", "$http", "$filter", "OnadataService", "ngTableParams", function ($scope, $http, $filter, ona, ngTableParams) {
+    pecsApp.controller('akwaibommCtrl', [ "$scope", "$http", "OnadataService", function ($scope, $http, ona) {
 
         // enable CORS
         $http.defaults.useXDomain = true;
@@ -158,24 +158,6 @@
         query.name = 'date_interview';
         
         $scope.interviewData = ona.query(query);
-        
-        //Pagination + sort
-        $scope.tableParams = new ngTableParams({
-	        page: 1, //show first page
-	        count: 10, //count per page
-	        sorting: {
-	        	date_interview: 'asc' //initial sorting 
-	        }
-	    }, {
-	        total: $scope.interviewData.length, // length of data
-	        getData: function($defer, params) {
-	            // use build-in angular filter
-	            var orderedData = params.sorting() ? 
-	                                $filter('orderBy')($scope.interviewData, params.orderBy()) :
-	                                $scope.interviewData;
-	            $defer.resolve(orderedData.slice((params.page() - 1) * params.count(), params.page() * params.count()));
-	        }
-	    });
 
         query.group = 'consent_group/interviewer_name';
         query.name = 'interviewer_name';
