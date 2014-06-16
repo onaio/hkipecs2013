@@ -10,8 +10,15 @@ table{
     min-height:5em;
 }
 table tr th{
+	background:#EFEFEF;
 	text-align:left!important;
 	width:50%!important;
+}
+table tr th a{
+	display:block;
+	float:left;
+	padding-right:1em;
+	text-decoration:none!important;
 }
 
 .area-txt{
@@ -55,17 +62,17 @@ table tr th{
 /*Tab content*/
 .tab-content{
 	background:#FFFFFF;
-	border-left:1px solid #DDD;
-	border-right:1px solid #DDD;
+	border:1px solid #DDD;
+	border-top:0;
 	padding-top:1.6em;
 }
 
 /* Custom page footer */
 .footer{
-    margin-top:;
-    padding-top: 19px;
-    color: #777;
-    border-top: 1px solid #e5e5e5;
+    color:#777;
+    font-size:0.9em;
+    margin-top:2em;
+    padding:1em 0;
 }
 
 /* Customize container */

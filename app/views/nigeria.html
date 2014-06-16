@@ -17,10 +17,10 @@
   	<div class="col-md-6">
         <table class="table table-bordered" si-table>
         <tr>
-        	<th sort-by="date_interview">Date of Interview</th>
+        	<th sort-by="date_interview_data">Date of Interview</th>
         	<th sort-by="count">No. of Surveys</th>
         </tr>
-        <tr ng-repeat="day in interviewData">
+        <tr ng-repeat="day in date_interview_data">
         	<td>{{ day.date_interview }}</td>
         	<td>{{ day.count }}</td>
         </tr>
@@ -40,7 +40,7 @@
         </tr>
         </thead>
         <tbody>
-        <tr ng-repeat="intr in interviewer">
+        <tr ng-repeat="intr in interviewer_data">
         	<td>{{ intr.interviewer_name }}</td>
         	<td>{{ intr.count }}</td>
         </tr>
@@ -61,7 +61,7 @@
         </tr>
         </thead>
         <tbody>
-        <tr ng-repeat="vlg in village">
+        <tr ng-repeat="vlg in village_data">
         	<td>{{ vlg.village }}</td>
         	<td>{{ vlg.count }}</td>
         </tr>
@@ -82,7 +82,7 @@
         </tr>
         </thead>
         <tbody>
-        <tr ng-repeat="vlga in village">
+        <tr ng-repeat="vlga in villagelga">
         	<td>{{ vlga.village_lga }}</td>
         	<td>{{ vlga.count }}</td>
         </tr>

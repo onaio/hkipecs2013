@@ -156,29 +156,20 @@
             site: 'ona.io'
         };
         query.name = 'date_interview';
-        $scope.interviewData = ona.query(query);
+        $scope.date_interview_data = ona.query(query);
         //alert($scope.interviewData.length);
 
         query.group = 'consent_group/interviewer_name';
         query.name = 'interviewer_name';
-        $scope.interviewer = ona.query(query);
-        $scope.interviewerGrid = {data: 'interviewer',
-            columnDefs: [{field:'interviewer_name', displayName:'Interviewer Name'}, {field:'count', displayName:'# Surveys'}]
-        };
+        $scope.interviewer_data = ona.query(query);
 
         query.group = 'consent_group/village';
         query.name = 'village';
-        $scope.village = ona.query(query);
-        $scope.villageGrid = {data: 'village',
-            columnDefs: [{field:'village', displayName:'Village Name'}, {field:'count', displayName:'# Surveys'}]
-        };
+        $scope.village_data = ona.query(query);
 
         query.group = 'consent_group/village_LGA';
         query.name = 'village_lga';
-        $scope.villagelga = ona.query(query);
-        $scope.villagelgaGrid = {data: 'villagelga',
-            columnDefs: [{field:'village_lga', displayName:'Village LGA'}, {field:'count', displayName:'# Surveys'}]
-        };
+        $scope.villagelga_data = ona.query(query);
     }]);
 
     pecsApp.controller('benueCtrl', [ "$scope", "$http", "OnadataService", function ($scope, $http, ona) {
