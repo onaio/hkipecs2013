@@ -7,18 +7,10 @@
 	<div class="panel-body">
 	    <div class="col-md-6">
 	        <table  ng-table="tableParams" class="table table-bordered">
-	        <thead>
-	       	<tr>
-	        	<th>Date of Interview</th>
-	        	<th>No. of Surveys</th>
+	        <tr ng-repeat="day in interviewData">
+	        	<td data-title="'Date of Interview'" sortable="'date_interview'">{{ day.date_interview }}</td>
+	        	<td data-title="'No. of Surveys'" sortable="'count'">{{ day.count }}</td>
 	        </tr>
-	        </thead>
-	        <tbody>
-	        <tr ng-repeat="day in dayofinterview">
-	        	<td data-title="Date of Interview">{{ day.date_interview }}</td>
-	        	<td data-title="No. of Surveys">{{ day.count }}</td>
-	        </tr>
-	        </tbody>
 	        </table>
 	    </div>
 	    <div class="col-md-6">
@@ -27,11 +19,11 @@
 	</div>
 </div>
 
-<!-- <div class="panel panel-default">
+<div class="panel panel-default">
 	<div class="panel-heading">Surveys by Interviewer</div>
 	<div class="panel-body">
 	    <div class="col-md-6">
-	        <table ng-table class="table table-bordered datatable">
+	        <table ng-table="tableParams" class="table table-bordered">
 	        <thead>
 	       	<tr>
 	        	<th>Interviewer</th>
@@ -40,8 +32,8 @@
 	        </thead>
 	        <tbody>
 	        <tr ng-repeat="intr in interviewer">
-	        	<td data-title="Interviewer">{{ intr.interviewer_name }}</td>
-	        	<td data-title="No. of Surveys">{{ intr.count }}</td>
+	        	<td data-title="Interviewer" sortable="interviewer_name">{{ intr.interviewer_name }}</td>
+	        	<td data-title="No. of Surveys" sortable="count">{{ intr.count }}</td>
 	        </tr>
 	        </tbody>
 	        </table>
@@ -100,7 +92,7 @@
 	        
 		</div>
 	</div>
-</div> -->
+</div>
 
 <div class="footer">
     <p>&copy; Helen Keller International, 2013</p>

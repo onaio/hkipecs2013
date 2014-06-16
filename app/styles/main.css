@@ -25,7 +25,7 @@ table tr th{
 }
 
 .navbar.navbar-inverse{
-	background:#65289B!important;
+	background:#006699!important;
     border:0;
 	color:#FFFFFF!important;
 }
@@ -33,7 +33,7 @@ table tr th{
 .navbar-inverse .navbar-nav > .active > a:hover, 
 .navbar-inverse .navbar-nav > .active > a:focus,
 .navbar-inverse .navbar-nav li a:hover{
-    background:#9276CC;
+    background:#1975A3;
 }
 .head-title{
 	font-size:1.2em;
@@ -52,11 +52,11 @@ table tr th{
 	height:auto!important;
     padding-top:0.7em!important;
 }
-.panel .panel-heading{
+/*.panel .panel-heading{
 	background:#777;
 	color:#FFFFFF;
 	font-weight:bold;
-}
+}*/
 
 /* Custom page footer */
 .footer{

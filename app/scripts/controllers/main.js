@@ -138,7 +138,7 @@
         };
     }]);
 
-    pecsApp.controller('akwaibommCtrl', [ "$scope", "$http", "OnadataService", function ($scope, $http, ona, ngTableParams) {
+    pecsApp.controller('akwaibommCtrl', [ "$scope", "$http", "$filter", "OnadataService", "ngTableParams", function ($scope, $http, $filter, ona, ngTableParams) {
 
         // enable CORS
         $http.defaults.useXDomain = true;
@@ -156,27 +156,27 @@
             site: 'ona.io'
         };
         query.name = 'date_interview';
-        $scope.dayofinterview = ona.query(query);
-        $scope.dayofinterviewGrid = {data: 'dayofinterview',
-            columnDefs: [{field:'date_interview', displayName:'Date of Interview'}, {field:'count', displayName:'# Surveys'}]
-        };
+        // $scope.dayofinterview = ona.query(query);
         
-        var intData = 'dayofinterview';
+        $scope.interviewData = ona.query(query);
         
         //Pagination + sort
         $scope.tableParams = new ngTableParams({
 	        page: 1, //show first page
-	        count: 10 //count per page
+	        count: 10, //count per page
+	        sorting: {
+	        	date_interview: 'asc' //initial sorting 
+	        }
 	    }, {
-	        total: intData.length, // length of data
+	        total: $scope.interviewData.length, // length of data
 	        getData: function($defer, params) {
 	            // use build-in angular filter
 	            var orderedData = params.sorting() ?
-	                                $filter('orderBy')(intData, params.orderBy()) :
-	                                data;
+	                                $filter('orderBy')($scope.interviewData, params.orderBy()) :
+	                                $scope.interviewData;
 	            $defer.resolve(orderedData.slice((params.page() - 1) * params.count(), params.page() * params.count()));
 	        }
-	    }); 
+	    });
 
         query.group = 'consent_group/interviewer_name';
         query.name = 'interviewer_name';

@@ -1,0 +1,135 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install' ]
+2 info using npm@1.4.9
+3 info using node@v0.10.28
+4 verbose node symlink /usr/bin/node
+5 warn package.json hkipecs@0.0.0 No repository field.
+6 verbose readDependencies using package.json deps
+7 verbose install where, deps [ '/home/william/ONA/hkipecs2013',
+7 verbose install   [ 'grunt',
+7 verbose install     'grunt-autoprefixer',
+7 verbose install     'grunt-concurrent',
+7 verbose install     'grunt-contrib-clean',
+7 verbose install     'grunt-contrib-coffee',
+7 verbose install     'grunt-contrib-compass',
+7 verbose install     'grunt-contrib-concat',
+7 verbose install     'grunt-contrib-connect',
+7 verbose install     'grunt-contrib-copy',
+7 verbose install     'grunt-contrib-cssmin',
+7 verbose install     'grunt-contrib-htmlmin',
+7 verbose install     'grunt-contrib-imagemin',
+7 verbose install     'grunt-contrib-jshint',
+7 verbose install     'grunt-contrib-uglify',
+7 verbose install     'grunt-contrib-watch',
+7 verbose install     'grunt-google-cdn',
+7 verbose install     'grunt-ngmin',
+7 verbose install     'grunt-rev',
+7 verbose install     'grunt-svgmin',
+7 verbose install     'grunt-usemin',
+7 verbose install     'jshint-stylish',
+7 verbose install     'load-grunt-tasks',
+7 verbose install     'time-grunt',
+7 verbose install     'karma-ng-scenario',
+7 verbose install     'grunt-karma',
+7 verbose install     'karma-script-launcher',
+7 verbose install     'karma-firefox-launcher',
+7 verbose install     'karma-chrome-launcher',
+7 verbose install     'karma-html2js-preprocessor',
+7 verbose install     'karma-jasmine',
+7 verbose install     'karma-requirejs',
+7 verbose install     'karma-coffee-preprocessor',
+7 verbose install     'karma-phantomjs-launcher',
+7 verbose install     'karma',
+7 verbose install     'karma-ng-html2js-preprocessor' ] ]
+8 info preinstall hkipecs@0.0.0
+9 verbose readDependencies using package.json deps
+10 verbose already installed skipping grunt-contrib-clean@~0.5.0 /home/william/ONA/hkipecs2013
+11 verbose already installed skipping grunt@~0.4.1 /home/william/ONA/hkipecs2013
+12 verbose already installed skipping grunt-autoprefixer@~0.4.0 /home/william/ONA/hkipecs2013
+13 verbose already installed skipping grunt-contrib-coffee@~0.7.0 /home/william/ONA/hkipecs2013
+14 verbose already installed skipping grunt-concurrent@~0.4.1 /home/william/ONA/hkipecs2013
+15 verbose already installed skipping grunt-contrib-compass@~0.6.0 /home/william/ONA/hkipecs2013
+16 verbose already installed skipping grunt-contrib-concat@~0.3.0 /home/william/ONA/hkipecs2013
+17 verbose already installed skipping grunt-contrib-connect@~0.5.0 /home/william/ONA/hkipecs2013
+18 verbose already installed skipping grunt-contrib-copy@~0.4.1 /home/william/ONA/hkipecs2013
+19 verbose already installed skipping grunt-contrib-cssmin@~0.7.0 /home/william/ONA/hkipecs2013
+20 verbose already installed skipping grunt-contrib-htmlmin@~0.1.3 /home/william/ONA/hkipecs2013
+21 verbose already installed skipping grunt-contrib-imagemin@~0.3.0 /home/william/ONA/hkipecs2013
+22 verbose already installed skipping grunt-contrib-jshint@~0.7.1 /home/william/ONA/hkipecs2013
+23 verbose already installed skipping grunt-contrib-uglify@~0.2.0 /home/william/ONA/hkipecs2013
+24 verbose already installed skipping grunt-contrib-watch@~0.5.2 /home/william/ONA/hkipecs2013
+25 verbose already installed skipping grunt-google-cdn@~0.2.0 /home/william/ONA/hkipecs2013
+26 verbose already installed skipping grunt-ngmin@~0.0.2 /home/william/ONA/hkipecs2013
+27 verbose already installed skipping grunt-rev@~0.1.0 /home/william/ONA/hkipecs2013
+28 verbose already installed skipping grunt-svgmin@~0.2.0 /home/william/ONA/hkipecs2013
+29 verbose already installed skipping grunt-usemin@~2.0.0 /home/william/ONA/hkipecs2013
+30 verbose already installed skipping jshint-stylish@~0.1.3 /home/william/ONA/hkipecs2013
+31 verbose already installed skipping load-grunt-tasks@~0.2.0 /home/william/ONA/hkipecs2013
+32 verbose already installed skipping time-grunt@~0.2.0 /home/william/ONA/hkipecs2013
+33 verbose already installed skipping karma-ng-scenario@~0.1.0 /home/william/ONA/hkipecs2013
+34 verbose already installed skipping grunt-karma@~0.6.2 /home/william/ONA/hkipecs2013
+35 verbose already installed skipping karma-script-launcher@~0.1.0 /home/william/ONA/hkipecs2013
+36 verbose already installed skipping karma-firefox-launcher@~0.1.0 /home/william/ONA/hkipecs2013
+37 verbose already installed skipping karma-chrome-launcher@~0.1.0 /home/william/ONA/hkipecs2013
+38 verbose already installed skipping karma-html2js-preprocessor@~0.1.0 /home/william/ONA/hkipecs2013
+39 verbose already installed skipping karma-jasmine@~0.1.3 /home/william/ONA/hkipecs2013
+40 verbose already installed skipping karma-phantomjs-launcher@~0.1.0 /home/william/ONA/hkipecs2013
+41 verbose already installed skipping karma-requirejs@~0.1.0 /home/william/ONA/hkipecs2013
+42 verbose already installed skipping karma-coffee-preprocessor@~0.1.0 /home/william/ONA/hkipecs2013
+43 verbose already installed skipping karma@~0.10.4 /home/william/ONA/hkipecs2013
+44 verbose already installed skipping karma-ng-html2js-preprocessor@~0.1.0 /home/william/ONA/hkipecs2013
+45 silly resolved []
+46 info build /home/william/ONA/hkipecs2013
+47 verbose linkStuff [ false, false, false, '/home/william/ONA' ]
+48 info linkStuff hkipecs@0.0.0
+49 verbose linkBins hkipecs@0.0.0
+50 verbose linkMans hkipecs@0.0.0
+51 verbose rebuildBundles hkipecs@0.0.0
+52 verbose rebuildBundles [ '.bin',
+52 verbose rebuildBundles   'grunt',
+52 verbose rebuildBundles   'grunt-autoprefixer',
+52 verbose rebuildBundles   'grunt-concurrent',
+52 verbose rebuildBundles   'grunt-contrib-clean',
+52 verbose rebuildBundles   'grunt-contrib-coffee',
+52 verbose rebuildBundles   'grunt-contrib-compass',
+52 verbose rebuildBundles   'grunt-contrib-concat',
+52 verbose rebuildBundles   'grunt-contrib-connect',
+52 verbose rebuildBundles   'grunt-contrib-copy',
+52 verbose rebuildBundles   'grunt-contrib-cssmin',
+52 verbose rebuildBundles   'grunt-contrib-htmlmin',
+52 verbose rebuildBundles   'grunt-contrib-imagemin',
+52 verbose rebuildBundles   'grunt-contrib-jshint',
+52 verbose rebuildBundles   'grunt-contrib-uglify',
+52 verbose rebuildBundles   'grunt-contrib-watch',
+52 verbose rebuildBundles   'grunt-google-cdn',
+52 verbose rebuildBundles   'grunt-karma',
+52 verbose rebuildBundles   'grunt-ngmin',
+52 verbose rebuildBundles   'grunt-rev',
+52 verbose rebuildBundles   'grunt-svgmin',
+52 verbose rebuildBundles   'grunt-usemin',
+52 verbose rebuildBundles   'jshint-stylish',
+52 verbose rebuildBundles   'karma',
+52 verbose rebuildBundles   'karma-chrome-launcher',
+52 verbose rebuildBundles   'karma-coffee-preprocessor',
+52 verbose rebuildBundles   'karma-firefox-launcher',
+52 verbose rebuildBundles   'karma-html2js-preprocessor',
+52 verbose rebuildBundles   'karma-jasmine',
+52 verbose rebuildBundles   'karma-ng-html2js-preprocessor',
+52 verbose rebuildBundles   'karma-ng-scenario',
+52 verbose rebuildBundles   'karma-phantomjs-launcher',
+52 verbose rebuildBundles   'karma-requirejs',
+52 verbose rebuildBundles   'karma-script-launcher',
+52 verbose rebuildBundles   'load-grunt-tasks',
+52 verbose rebuildBundles   'time-grunt' ]
+53 info install hkipecs@0.0.0
+54 info postinstall hkipecs@0.0.0
+55 info prepublish hkipecs@0.0.0
+56 error peerinvalid The package karma-requirejs does not satisfy its siblings' peerDependencies requirements!
+56 error peerinvalid Peer karma@0.10.10 wants karma-requirejs@~0.2.0
+57 error System Linux 3.11.0-23-generic
+58 error command "/usr/bin/node" "/usr/bin/npm" "install"
+59 error cwd /home/william/ONA/hkipecs2013
+60 error node -v v0.10.28
+61 error npm -v 1.4.9
+62 error code EPEERINVALID
+63 verbose exit [ 1, true ]

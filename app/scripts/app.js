@@ -7,7 +7,6 @@
             'ngResource',
             'ngSanitize',
             'ngRoute',
-            'ngGrid',
             'ngTable'
         ])
         .config(["$routeProvider", "$httpProvider", function ($routeProvider, $httpProvider) {
