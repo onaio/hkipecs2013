@@ -11,21 +11,12 @@
         ])
         .config(["$routeProvider", "$httpProvider", function ($routeProvider, $httpProvider) {
             $routeProvider
-                .when('/nigeria', {
-                    templateUrl: 'views/nigeria.html',
-                    controller: 'nigeriaCtrl'
+                .when('/burkina', {
+                    templateUrl: 'views/burkina.html',
+                    controller: 'burkinaCtrl'
                 })
                 .otherwise({
-                    redirectTo: '/nigeria'
+                    redirectTo: 'burkina'
                 });
         }]);
 })();
-
-$(document).ready(function(){
-	/*configure active nav states*/
-	var nav_lnk = $("#ctr_nav li");
-	nav_lnk.click(function(){
-	  nav_lnk.removeClass("active");
-	  $(this).addClass("active");
-	});
-});

@@ -8,7 +8,6 @@
   <li class="active"><a href="#dateinterview" data-toggle="tab">Survey by Date of Interview</a></li>
   <li><a href="#byinterviewer" data-toggle="tab">Survey by Interviewer</a></li>
   <li><a href="#village" data-toggle="tab">Survey by Villages</a></li>
-  <li><a href="#ward" data-toggle="tab">Survey by Ward</a></li>
 </ul>
 
 <!-- Tab panes -->
@@ -71,27 +70,6 @@
     <div class="col-md-6">
 
     </div>
-  </div>
-  <div class="tab-pane" id="ward">
-  	<div class="col-md-6">
-        <table class="table table-bordered" si-table>
-        <thead>
-       	<tr>
-        	<th sort-by="ward">Ward</th>
-        	<th sort-by="count">No. of Surveys</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr ng-repeat="ward in wards">
-        	<td>{{ ward.ward }}</td>
-        	<td>{{ ward.count }}</td>
-        </tr>
-        </tbody>
-        </table>
-    </div>
-    <div class="col-md-6">
-
-	</div>
   </div>
 </div>
 
