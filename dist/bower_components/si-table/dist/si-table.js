@@ -5,7 +5,7 @@ angular.module('siTable.filters', []);
 angular.module('siTable',
 [
   'siTable.directives',
-  'siTable.filters'
+  'siTable.filters',
 ]);
 /**
 * SiTable (main) Directive
@@ -29,7 +29,7 @@ angular.module('siTable.directives').directive('siTable', function() {
       };
 
       this.sortingParams = {
-        sortArray: []
+        sortArray: [],
       };
 
       // Copy sortArray to scope binding
@@ -77,10 +77,10 @@ angular.module('siTable.directives').directive('siTable', function() {
 */
 angular.module('siTable.directives').directive('siTablePagination', function() {
   return {
-    restrict: 'AE',
+    restrict: 'E',
     require: '^siTable',
     scope: {
-      offset: '=?' // read-only
+      offset: '=?', // read-only
     },
     template: '\
     <ul class="pagination">\
@@ -232,16 +232,6 @@ angular.module('siTable.directives').directive('sortBy', function() {
         scope.sortBy = sortBy;
       });
 
-      // If the sortInit attribute is set, then initialize sorting on this
-      // header
-      if (attrs.sortInit === 'desc') {
-        params.sortArray.push('-' + attrs.sortBy);
-        scope.state = 'desc';
-      } else if (attrs.sortInit) {
-        params.sortArray.push(attrs.sortBy);
-        scope.state = 'asc';
-      }
-
       scope.sort = function() {
         var sortBy = attrs.sortBy;
         if (!sortBy || !params) {
@@ -253,12 +243,12 @@ angular.module('siTable.directives').directive('sortBy', function() {
         if (params.sortArray.indexOf(sortBy) !== -1) {
           // ascending -> descending
           params.sortArray[params.sortArray.indexOf(sortBy)] = '-' +
-            sortBy;
+          sortBy;
           scope.state = 'desc';
         } else if (params.sortArray.indexOf('-' + sortBy) !== -1) {
           // descending -> neutral
           params.sortArray.splice(params.sortArray.indexOf('-' +
-            sortBy), 1);
+          sortBy), 1);
           scope.state = '';
         } else {
           // neutral -> ascending
@@ -302,14 +292,6 @@ angular.module('siTable.directives').directive('tr', function() {
 
           scope.paginationParams = controller.paginationParams;
 
-          if (attrs.ngRepeat) {
-            var matches = attrs.ngRepeat.match(/^\s*([\s\S]+?)\s+in\s+([\s\S]+?)(?:\s+track\s+by\s+([\s\S]+?))?\s*$/),
-              collection = matches[2].split('|')[0].trim();
-            scope.$watchCollection(collection, function() {
-              scope.paginationParams.offset = 0;
-            });
-          }
-
           scope.$watch('paginationParams.remote', function(remote) {
             if (remote) {
               scope.sortingParams = {};
@@ -341,8 +323,8 @@ angular.module('siTable.filters').filter('siPagination', function() {
     if (input) {
       params.total = input.length;
     }
-    return input && input.length ?
-      input.slice(params.offset, params.offset + params.limit) : [];
+    return input.length ?
+    input.slice(params.offset, params.offset + params.limit) : [];
   };
 });
 })(window, document);
