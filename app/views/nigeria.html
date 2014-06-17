@@ -1,102 +1,121 @@
 
-<br/><br/>
-<h3 class="area-txt"><i class="glyphicon glyphicon-map-marker"></i> {{country}}</h3>
-<br/>
-
-
-<ul class="nav nav-tabs" id="summarytabs">
-  <li class="active"><a href="#dateinterview" data-toggle="tab">Survey by Date of Interview</a></li>
-  <li><a href="#byinterviewer" data-toggle="tab">Survey by Interviewer</a></li>
-  <li><a href="#village" data-toggle="tab">Survey by Village</a></li>
-  <li><a href="#ward" data-toggle="tab">Survey by LGA</a></li>
-</ul>
-
-<!-- Tab panes -->
-<div class="tab-content clearfix">
-  <div class="tab-pane active clearfix" id="dateinterview">
-  	<div class="col-md-6">
-        <table class="table table-bordered" si-table>
-        <tr>
-        	<th sort-by="date_interview">Date of Interview</th>
-        	<th sort-by="count">No. of Surveys</th>
-        </tr>
-        <tr ng-repeat="day in date_interview_data">
-        	<td>{{ day.date_interview }}</td>
-        	<td>{{ day.count }}</td>
-        </tr>
-        </table>
-    </div>
-    <div class="col-md-6">
-
-    </div>
-  </div>
-  <div class="tab-pane" id="byinterviewer">
-  	<div class="col-md-6">
-        <table class="table table-bordered" si-table>
-        <thead>
-       	<tr>
-        	<th sort-by="interviewer_name">Interviewer</th>
-        	<th sort-by="count">No. of Surveys</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr ng-repeat="interviewer in interviewer_data">
-        	<td>{{ interviewer.interviewer_name }}</td>
-        	<td>{{ interviewer.count }}</td>
-        </tr>
-        </tbody>
-        </table>
-    </div>
-    <div class="col-md-6">
-
-    </div>
-  </div>
-  <div class="tab-pane" id="village">
-    <div class="col-md-6">
-        <table class="table table-bordered" si-table>
-        <thead>
-       	<tr>
-        	<th sort-by="village">Village</th>
-        	<th sort-by="count">No. of Surveys</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr ng-repeat="village in village_data">
-        	<td>{{ village.village }}</td>
-        	<td>{{ village.count }}</td>
-        </tr>
-        </tbody>
-        </table>
-    </div>
-    <div class="col-md-6">
-
-    </div>
-  </div>
-  <div class="tab-pane" id="ward">
-  	<div class="col-md-6">
-        <table class="table table-bordered" si-table>
-        <thead>
-       	<tr>
-        	<th sort-by="ward">Ward</th>
-        	<th sort-by="count">No. of Surveys</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr ng-repeat="ward in wards">
-        	<td>{{ ward.ward }}</td>
-        	<td>{{ ward.count }}</td>
-        </tr>
-        </tbody>
-        </table>
-    </div>
-    <div class="col-md-6">
-
+<div class="container">
+	<br/><br/>
+	<h3 class="area-txt"><i class="glyphicon glyphicon-map-marker"></i> {{country}}</h3>
+	<br/>
+	
+    <ul class="nav nav-tabs show-tablet" id="summarytabs">
+    	<li><h4>Survey by: </h4></li>
+		<li class="dropdown">
+			<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+			Date of Interview <span class="caret"></span>
+			</a> 
+			<ul class="dropdown-menu">
+			<li class="active"><a href="#dateinterview" data-toggle="tab">Date of Interview</a></li>
+			<li><a href="#byinterviewer" data-toggle="tab">Interviewer</a></li>
+			<li><a href="#village" data-toggle="tab">Village</a></li>
+			<li><a href="#ward" data-toggle="tab">LGA</a></li>
+			</ul>
+		</li>
+	</ul>
+	
+	<ul class="nav nav-tabs hide-tablet" id="summarytabs">
+	  <li class="active"><a href="#dateinterview" data-toggle="tab">Survey by Date of Interview</a></li>
+	  <li><a href="#byinterviewer" data-toggle="tab">Survey by Interviewer</a></li>
+	  <li><a href="#village" data-toggle="tab">Survey by Village</a></li>
+	  <li><a href="#ward" data-toggle="tab">Survey by LGA</a></li>
+	</ul>
+	
+	<!-- Tab panes -->
+	<div class="tab-content clearfix">
+	  <div class="tab-pane active clearfix" id="dateinterview">
+	  	<div class="col-md-6">
+	        <table class="table table-bordered" si-table>
+	        <tr>
+	        	<th sort-by="date_interview">Date of Interview</th>
+	        	<th sort-by="count">No. of Surveys</th>
+	        </tr>
+	        <tr ng-repeat="day in date_interview_data">
+	        	<td>{{ day.date_interview }}</td>
+	        	<td>{{ day.count }}</td>
+	        </tr>
+	        </table>
+	    </div>
+	    <div class="col-md-6">
+	
+	    </div>
+	  </div>
+	  <div class="tab-pane" id="byinterviewer">
+	  	<div class="col-md-6">
+	        <table class="table table-bordered" si-table>
+	        <thead>
+	       	<tr>
+	        	<th sort-by="interviewer_name">Interviewer</th>
+	        	<th sort-by="count">No. of Surveys</th>
+	        </tr>
+	        </thead>
+	        <tbody>
+	        <tr ng-repeat="interviewer in interviewer_data">
+	        	<td>{{ interviewer.interviewer_name }}</td>
+	        	<td>{{ interviewer.count }}</td>
+	        </tr>
+	        </tbody>
+	        </table>
+	    </div>
+	    <div class="col-md-6">
+	
+	    </div>
+	  </div>
+	  <div class="tab-pane" id="village">
+	    <div class="col-md-6">
+	        <table class="table table-bordered" si-table>
+	        <thead>
+	       	<tr>
+	        	<th sort-by="village">Village</th>
+	        	<th sort-by="count">No. of Surveys</th>
+	        </tr>
+	        </thead>
+	        <tbody>
+	        <tr ng-repeat="village in village_data">
+	        	<td>{{ village.village }}</td>
+	        	<td>{{ village.count }}</td>
+	        </tr>
+	        </tbody>
+	        </table>
+	    </div>
+	    <div class="col-md-6">
+	
+	    </div>
+	  </div>
+	  <div class="tab-pane" id="ward">
+	  	<div class="col-md-6">
+	        <table class="table table-bordered" si-table>
+	        <thead>
+	       	<tr>
+	        	<th sort-by="ward">Ward</th>
+	        	<th sort-by="count">No. of Surveys</th>
+	        </tr>
+	        </thead>
+	        <tbody>
+	        <tr ng-repeat="ward in wards">
+	        	<td>{{ ward.ward }}</td>
+	        	<td>{{ ward.count }}</td>
+	        </tr>
+	        </tbody>
+	        </table>
+	    </div>
+	    <div class="col-md-6">
+	
+		</div>
+	  </div>
 	</div>
-  </div>
 </div>
 
 <div class="footer">
-    <p>&copy; Helen Keller International, 2013</p>
+	<div class="container">
+		<img src="images/hki-logotype.png" alt="HKI Logo" class="show-tablet img-responsive"/>
+	    <p class="copyright">&copy; Helen Keller International, 2013</p>
+	</div>
 </div>
 
 <script type="text/javascript">
