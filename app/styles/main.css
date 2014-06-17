@@ -103,12 +103,16 @@ table tr th a{
 		margin-left:1em;
 	}
 	#summarytabs a{
-		padding:0.5em 1em 0.6em;
+		padding:0.6em 1em;
 	}
 	#summarytabs .dropdown-menu{
 		border-radius:0;
 		width:100%;
 	}
+	li.active a.dropdown-toggle{
+		border:0;
+	}
+	
 	button.navbar-toggle{
 		margin-top:0.5em;
 	}
@@ -134,7 +138,6 @@ table tr th a{
 	.tab-pane .col-md-6{
 		padding:1em 0;
 	}
-	
 }
 
 /* Responsive: Portrait tablets and up */
