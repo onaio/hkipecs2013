@@ -82,8 +82,16 @@ table tr th a{
 /* Customize container */
 @media (max-width: 768px) {
 	.navbar.navbar-inverse{
-		padding-bottom:1em;
+		/*padding-bottom:1em;*/
 	}
+	.navbar-nav{
+		margin-top:0;
+		margin-bottom:0;
+	}
+	.headpad a{
+		padding-top:0.9em;
+	}
+	
 	/*Now as dropdown menu*/
 	#summarytabs.show-tablet{
 		border-bottom:0;
@@ -101,7 +109,7 @@ table tr th a{
 		width:100%;
 	}
 	button.navbar-toggle{
-		margin-top:1em;
+		margin-top:0.5em;
 	}
 	.footer{
 		background:#707070;
