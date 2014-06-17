@@ -20,12 +20,3 @@
                 });
         }]);
 })();
-
-$(document).ready(function(){
-	/*configure active nav states*/
-	var nav_lnk = $("#ctr_nav li");
-	nav_lnk.click(function(){
-	  nav_lnk.removeClass("active");
-	  $(this).addClass("active");
-	});
-});
