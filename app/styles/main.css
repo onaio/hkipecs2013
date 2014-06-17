@@ -92,6 +92,9 @@ table tr th a{
 	.headpad a{
 		padding-top:0.9em;
 	}
+	.navbar-collapse{
+		height:1px;
+	}
 	
 	/*Now as dropdown menu*/
 	#summarytabs.show-tablet{
@@ -109,8 +112,10 @@ table tr th a{
 		border-radius:0;
 		width:100%;
 	}
-	li.active a.dropdown-toggle{
-		border:0;
+	a.dropdown-toggle{
+		border:0!important;
+		border-radius:0!important;
+		margin:0!important;
 	}
 	
 	button.navbar-toggle{

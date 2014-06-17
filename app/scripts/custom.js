@@ -1,6 +1,9 @@
 function customShowTab(e){
     e.preventDefault();
     $(this).tab('show');
+    
+    var selectedTxt =  $(this).text();
+	$("#surveyByFilter").text(selectedTxt);
 }
 
 var navlinks=$("#ctr_nav li");
