@@ -24,6 +24,11 @@ table tr th a{
 	padding-right:1em;
 	text-decoration:none!important;
 }
+/*Charts*/
+.chart{
+	width:50em;
+	height:30em;
+}
 
 .area-txt{
 	color:#707070;
