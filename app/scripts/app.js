@@ -7,7 +7,8 @@
             'ngResource',
             'ngSanitize',
             'ngRoute',
-            'siTable'
+            'siTable',
+            'angularCharts'
         ])
         .config(["$routeProvider", "$httpProvider", function ($routeProvider, $httpProvider) {
             $routeProvider

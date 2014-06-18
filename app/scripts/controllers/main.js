@@ -2,9 +2,7 @@
 (function(){
     'use strict';
 
-
     var pecsApp = angular.module('hkipecsApp');
-
 
     pecsApp.controller('nigeriaCtrl', [ "$scope", "$http", "OnadataService", function ($scope, $http, ona) {
 
@@ -37,5 +35,4 @@
         query.name = 'ward';
         $scope.wards = ona.query(query);
     }]);
-
 })();
