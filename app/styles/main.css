@@ -29,6 +29,59 @@ table tr th a{
 	width:50em;
 	height:30em;
 }
+/*ngGrid*/
+.ngViewport{
+	height:auto!important;
+	/*margin-bottom:3em;*/
+}
+.ngGrid{
+	background:transparent!important;
+	border-left:1px solid #DDDDDD!important;
+	margin-bottom:3em;
+	overflow:hidden!important;
+	width:97%!important;
+}
+/*reset cell borders*/
+.ngGrid div{
+	border-right:1px solid transparent;
+	outline:none;
+}
+.ngTopPanel{
+	background:#FFFFFF;
+}
+.ngHeaderScroller{
+	border:0!important;
+}
+.ngHeaderCell{
+	background:#eaeaea;
+	border-top:1px solid #DDDDDD!important;
+	border-bottom:1px solid #DDDDDD!important;
+	/*margin-left: -1px;*/
+}
+.ngHeaderCell:first-child{
+	outline:1px solid #DDDDDD!important;
+	margin-left: -1px;
+}
+.ngHeaderCell:last-child{
+	border-right:1px solid #DDDDDD!important;
+}
+.ngHeaderText{
+	color:#428bca;
+}
+.ngCanvas, .ngCell{
+	outline:1px solid #DDDDDD!important;
+}
+.ngCanvas{
+	width:auto!important;
+}
+.ngRow.even, .ngRow.odd{
+	background:#FFFFFF;
+	margin-left: -1px;
+}
+.ngCell, .ngHeaderCell{
+	height:auto!important;
+	padding-left:0.8em;
+}
 
 .area-txt{
 	color:#707070;
