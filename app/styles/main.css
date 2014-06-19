@@ -3,6 +3,7 @@ body{
 	font-family:'Open Sans', sans-serif!important;
     padding-top:3em;
 }
+a:focus{ outline:none!important; }
 
 strong{ font-weight:700; }
 
@@ -14,11 +15,73 @@ table tr th{
 	text-align:left!important;
 	width:50%!important;
 }
+table tr td{
+	background:#FFFFFF;
+}
 table tr th a{
 	display:block;
 	float:left;
 	padding-right:1em;
 	text-decoration:none!important;
+}
+/*Charts*/
+.chart{
+	width:50em;
+	height:30em;
+}
+/*ngGrid*/
+.ngViewport{
+	height:auto!important;
+	/*margin-bottom:3em;*/
+}
+.ngGrid{
+	background:transparent!important;
+	border-left:1px solid #DDDDDD!important;
+	margin-bottom:3em;
+	overflow:hidden!important;
+	width:97%!important;
+}
+/*reset cell borders*/
+.ngGrid div{
+	outline:none;
+}
+.ngTopPanel{
+	background:transparent!important;
+	border:0!important;
+}
+.ngHeaderScroller{
+	background:#FFFFFF!important;
+	border:0!important;
+}
+.ngHeaderCell{
+	background:#eaeaea;
+	border-top:1px solid #DDDDDD!important;
+	border-bottom:1px solid #DDDDDD!important;
+	/*margin-left: -1px;*/
+}
+.ngHeaderCell:first-child{
+	outline:1px solid #DDDDDD!important;
+	margin-left: -1px;
+}
+.ngHeaderCell:last-child{
+	border-right:1px solid #DDDDDD!important;
+}
+.ngHeaderText{
+	color:#428bca;
+}
+.ngCanvas, .ngCell{
+	outline:1px solid #DDDDDD!important;
+}
+.ngCanvas{
+	width:auto!important;
+}
+.ngRow.even, .ngRow.odd{
+	/*background:#FFFFFF;*/
+	margin-left: -1px;
+}
+.ngCell, .ngHeaderCell{
+	height:auto!important;
+	padding-left:0.8em;
 }
 
 .area-txt{
@@ -74,10 +137,75 @@ table tr th a{
     margin-top:2em;
     padding:1em 0;
 }
+.show-tablet{ display:none; }
 
 /* Customize container */
-@media (min-width: 768px) {
-  
+@media (max-width: 768px) {
+	.navbar.navbar-inverse{
+		/*padding-bottom:1em;*/
+	}
+	.navbar-nav{
+		margin-top:0;
+		margin-bottom:0;
+	}
+	.headpad a{
+		padding-top:0.9em;
+	}
+	.navbar-collapse{
+		height:1px;
+	}
+	
+	/*Now as dropdown menu*/
+	#summarytabs.show-tablet{
+		border-bottom:0;
+	}
+	#summarytabs .dropdown{
+		background:#FFFFFF;
+		border:1px solid #CFCFCF;
+		margin-left:1em;
+	}
+	#summarytabs a{
+		padding:0.6em 1em;
+	}
+	#summarytabs .dropdown-menu{
+		border-radius:0;
+		width:100%;
+	}
+	a.dropdown-toggle{
+		border:0!important;
+		border-radius:0!important;
+		margin:0!important;
+	}
+	
+	button.navbar-toggle{
+		margin-top:0.5em;
+	}
+	.footer{
+		background:#707070;
+		color:#FFFFFF!important;
+	}
+	.footer p.copyright{
+		padding-top:2em;
+	}
+	.show-tablet{
+		display:block;
+	}
+	.hide-tablet{
+		display:none;
+	}
+	.tab-content{
+		background:transparent;
+		border:0;
+		margin-top:1em;
+	    padding:0;
+	}
+	.tab-pane .col-md-6{
+		padding:1em 0;
+	}
+	.ngHeaderScroller{
+		background:#f7f7f7!important;
+		border:0!important;
+	}
 }
 
 /* Responsive: Portrait tablets and up */

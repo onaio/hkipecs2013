@@ -6,12 +6,12 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>HKI PECs NIGERIA</title>
+<title>HKI PECs Burkina Faso</title>
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="//fonts.googleapis.com/css?family=Open+Sans:400,700">
 <link rel="icon" href="favicon.ico">
-<link rel="stylesheet" href="styles/eb5b38cd.main.css"/>
+<link rel="stylesheet" href="styles/512ea5a6.main.css"/>
 </head>
 <body ng-app="hkipecsApp">
     <!--[if lt IE 7]>
@@ -27,7 +27,7 @@
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="header-inner container">
             <div class="navbar-header headpad">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu-navbar-collapse-1">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -37,16 +37,22 @@
                   <strong>HKI PECs</strong> Burkina Faso
                 </a>
             </div>
-			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav headpad" id="ctr_nav">
+			<div class="collapse navbar-collapse" id="menu-navbar-collapse-1">
+                <ul class="nav navbar-nav headpad hide-tablet" id="ctr_nav">
                     <li class="active">
                         <a href="#burkina">Burkina Faso</a>
                     </li>
                 </ul>
 
-                <ul class="nav navbar-nav navbar-right">
+                <ul class="nav navbar-nav headpad show-tablet" id="ctr_nav">
+                    <li class="active">
+                        <a href="#nigeria" data-toggle="collapse" data-target="#menu-navbar-collapse-1">Nigeria</a>
+                    </li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right hide-tablet">
                     <li><span class="navbar-brand logoholder" href="index.html">
-					<img src="images/99d94f9e.hki-logotype.png" alt="logo" class="img-responsive">
+					<img src="images/99d94f9e.hki-logotype.png" alt="HKI Logo" class="img-responsive">
 				</span></li>
                 </ul>
 			</div>
@@ -54,7 +60,7 @@
     </div>
 
     <!-- Add your site or application content here -->
-    <div class="container" ng-view="MainCtrl">
+    <div ng-view="MainCtrl">
 
     </div>
 
@@ -74,8 +80,8 @@
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- <script src="bower_components/datatables/media/js/jquery.dataTables.js"></script> -->
 
-    <script src="scripts/7c327793.modules.js"></script>
+    <script src="scripts/ff945ce0.modules.js"></script>
 
-    <script src="scripts/4d6ed2f7.scripts.js"></script>
+    <script src="scripts/cf383b6e.scripts.js"></script>
 </body>
 </html>
