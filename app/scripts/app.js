@@ -17,7 +17,7 @@
                 })
                 .when('/benue', {
                     templateUrl: 'views/nigeria.html',
-                    controller: 'nigeriaCtrl'
+                    controller: 'benueCtrl'
                 })
                 .otherwise({
                     redirectTo: '/nigeria'
