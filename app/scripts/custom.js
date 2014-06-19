@@ -2,7 +2,7 @@ function customShowTab(e){
     e.preventDefault();
     $(this).tab('show');
     $("#surveyByFilter").text($(this).text());
-}
+} 
 
 var navlinks=$("#ctr_nav li");
 

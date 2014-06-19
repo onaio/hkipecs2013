@@ -43,7 +43,6 @@ table tr th a{
 }
 /*reset cell borders*/
 .ngGrid div{
-	border-right:1px solid transparent;
 	outline:none;
 }
 .ngTopPanel{
@@ -51,7 +50,7 @@ table tr th a{
 	border:0!important;
 }
 .ngHeaderScroller{
-	background:#f7f7f7!important;
+	background:#FFFFFF!important;
 	border:0!important;
 }
 .ngHeaderCell{
@@ -202,6 +201,10 @@ table tr th a{
 	}
 	.tab-pane .col-md-6{
 		padding:1em 0;
+	}
+	.ngHeaderScroller{
+		background:#f7f7f7!important;
+		border:0!important;
 	}
 }
 

@@ -25,8 +25,10 @@
         var interviewbyDate = ona.query(query);
         $scope.date_interview_data = interviewbyDate;
         $scope.interviewDateTable = { 
-	        		data: 'date_interview_data', jqueryUITheme: true,
-	        		columnDefs: [{field:'date_interview', displayName:'Date of Interview'}, {field:'count', displayName:'No. of Surveys'}]
+	        		data: 'date_interview_data',
+	        		columnDefs: [{field:'date_interview', displayName:'Date of Interview',cellFilter:'date'}, 
+	        					{field:'count', displayName:'No. of Surveys'}],
+	        		sortInfo: {fields:['date_interview'], directions:['asc']}
         		};
         
         query.group = 'consent_group/interviewer_name';
@@ -34,7 +36,9 @@
         $scope.interviewer_data = ona.query(query);
         $scope.interviewerTable = { 
 	        		data: 'interviewer_data',
-	        		columnDefs: [{field:'interviewer_name', displayName:'Interviewer'}, {field:'count', displayName:'No. of Surveys'}]
+	        		columnDefs: [{field:'interviewer_name', displayName:'Interviewer'}, 
+	        					{field:'count', displayName:'No. of Surveys'}],
+	        		sortInfo: {fields:['interviewer_name'], directions:['asc']}
         		};
 
         query.group = 'consent_group/village';
@@ -42,7 +46,9 @@
         $scope.village_data = ona.query(query);
         $scope.villageTable = { 
 	        		data: 'village_data',
-	        		columnDefs: [{field:'village', displayName:'Village'}, {field:'count', displayName:'No. of Surveys'}]
+	        		columnDefs: [{field:'village', displayName:'Village'}, 
+	        					{field:'count', displayName:'No. of Surveys'}],
+	        		sortInfo: {fields:['village'], directions:['asc']}
         		};
 
         query.group = 'consent_group/village_LGA';
@@ -50,7 +56,9 @@
         $scope.wards = ona.query(query);
         $scope.wardTable = { 
 	        		data: 'wards',
-	        		columnDefs: [{field:'ward', displayName:'Ward'}, {field:'count', displayName:'No. of Surveys'}]
+	        		columnDefs: [{field:'ward', displayName:'Ward'}, 
+	        					{field:'count', displayName:'No. of Surveys'}],
+	        		sortInfo: {fields:['ward'], directions:['asc']}
         		};
     }]);
 })();
