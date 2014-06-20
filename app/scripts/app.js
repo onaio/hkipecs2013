@@ -11,12 +11,12 @@
         ])
         .config(["$routeProvider", "$httpProvider", function ($routeProvider, $httpProvider) {
             $routeProvider
-                .when('/burkina', {
-                    templateUrl: 'views/burkina.html',
-                    controller: 'burkinaCtrl'
+                .when('/mozambique', {
+                    templateUrl: 'views/main.html',
+                    controller: 'mozambiqueCtrl'
                 })
                 .otherwise({
-                    redirectTo: 'burkina'
+                    redirectTo: 'mozambique'
                 });
         }]);
 })();
