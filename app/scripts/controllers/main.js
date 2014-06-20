@@ -14,6 +14,10 @@
 
         $scope.survey = {};
         $scope.country = "Nigeria";
+        $scope.date_label = 'Date of Interview';
+        $scope.interviewer_label = 'Interviewer Last Name and Initials';
+        $scope.village_label = 'Village or Community';
+        $scope.ward_label = 'Ward';
 
         var query = {
             group : 'interview_date',
@@ -28,7 +32,7 @@
             data : 'date_interview_data',
             columnDefs : [{
                 field : 'date_interview',
-                displayName : 'Date of Interview',
+                displayName : $scope.date_label,
                 cellFilter : 'date'
             }, {
                 field : 'count',
@@ -47,7 +51,7 @@
             data : 'interviewer_data',
             columnDefs : [{
                 field : 'interviewer_name',
-                displayName : 'Interviewer'
+                displayName : $scope.interviewer_label
             }, {
                 field : 'count',
                 displayName : 'No. of Surveys'
@@ -65,13 +69,31 @@
             data : 'village_data',
             columnDefs : [{
                 field : 'village',
-                displayName : 'Village'
+                displayName : $scope.village_label
             }, {
                 field : 'count',
                 displayName : 'No. of Surveys'
             }],
             sortInfo : {
                 fields : ['village'],
+                directions : ['asc']
+            }
+        };
+
+        query.group = 'ward';
+        query.name = 'ward';
+        $scope.ward_data = ona.query(query);
+        $scope.wardTable = {
+            data : 'ward_data',
+            columnDefs : [{
+                field : 'ward',
+                displayName : $scope.ward_label
+            }, {
+                field : 'count',
+                displayName : 'No. of Surveys'
+            }],
+            sortInfo : {
+                fields : ['ward'],
                 directions : ['asc']
             }
         };

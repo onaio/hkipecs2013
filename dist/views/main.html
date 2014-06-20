@@ -1,8 +1,7 @@
-
 <div class="container">
-	<br/><br/>
+	<br><br>
 	<h3 class="area-txt"><i class="glyphicon glyphicon-map-marker"></i> {{country}}</h3>
-	<br/>
+	<br>
 
     <ul class="nav nav-tabs show-tablet" id="summarytabs">
     	<li><h4>Survey by: </h4></li>
@@ -14,7 +13,7 @@
 				<li class="active"><a href="#dateinterview" data-toggle="tab">Date of Interview</a></li>
 				<li><a href="#byinterviewer" data-toggle="tab">Interviewer</a></li>
 				<li><a href="#village" data-toggle="tab">Village</a></li>
-				<li><a href="#ward" data-toggle="tab">LGA</a></li>
+				<li><a href="#ward" data-toggle="tab">Ward</a></li>
 			</ul>
 		</li>
 	</ul>
@@ -23,6 +22,7 @@
 	  <li class="active"><a href="#dateinterview" data-toggle="tab">Survey by Date of Interview</a></li>
 	  <li><a href="#byinterviewer" data-toggle="tab">Survey by Interviewer</a></li>
 	  <li><a href="#village" data-toggle="tab">Survey by Village</a></li>
+	  <li><a href="#ward" data-toggle="tab">Survey by Ward</a></li>
 	</ul>
 
 	<!-- Tab panes -->
@@ -51,12 +51,20 @@
 
 	    </div>
 	  </div>
+	  <div class="tab-pane" id="ward">
+	    <div class="col-md-6">
+	        <div ng-grid="wardTable" class="clearfix"></div>
+	    </div>
+	    <div class="col-md-6">
+
+	    </div>
+	  </div>
 	</div>
 </div>
 
 <div class="footer">
 	<div class="container">
-		<img src="images/hki-logotype.png" alt="HKI Logo" class="show-tablet img-responsive"/>
+		<img src="images/99d94f9e.hki-logotype.png" alt="HKI Logo" class="show-tablet img-responsive">
 	    <p class="copyright">&copy; Helen Keller International, 2013</p>
 	</div>
 </div>
