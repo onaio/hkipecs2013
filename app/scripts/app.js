@@ -12,7 +12,7 @@
         .config(["$routeProvider", "$httpProvider", function ($routeProvider, $httpProvider) {
             $routeProvider
                 .when('/burkina', {
-                    templateUrl: 'views/burkina.html',
+                    templateUrl: 'views/main.html',
                     controller: 'burkinaCtrl'
                 })
                 .otherwise({

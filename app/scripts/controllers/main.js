@@ -13,6 +13,9 @@
 
         $scope.survey = {};
         $scope.country = "Burkina Faso";
+        $scope.date_label = 'Date d’aujourd’hui';
+        $scope.village_label =  'Village';
+        $scope.interviewer_label = 'Nom et prénom de l’enquêteur';
 
         var query = {
             group: 'date',
@@ -27,7 +30,7 @@
             data : 'date_interview_data',
             columnDefs : [{
                 field : 'date_interview',
-                displayName : 'Date of Interview',
+                displayName : $scope.date_label,
                 cellFilter : 'date'
             }, {
                 field : 'count',
@@ -46,7 +49,7 @@
             data : 'interviewer_data',
             columnDefs : [{
                 field : 'interviewer_name',
-                displayName : 'Interviewer'
+                displayName : $scope.interviewer_label
             }, {
                 field : 'count',
                 displayName : 'No. of Surveys'
@@ -64,7 +67,7 @@
             data : 'village_data',
             columnDefs : [{
                 field : 'village',
-                displayName : 'Village'
+                displayName : $scope.village_label
             }, {
                 field : 'count',
                 displayName : 'No. of Surveys'
