@@ -20,7 +20,7 @@
         $scope.ward_label = 'Ward';
 
         var query = {
-            group : 'interview_date',
+            group : 'given_consent/interview_date',
             user : 'hkmnchwmonitoring1234',
             formid : 'PECS_Caregiver_Questionnaire_2',
             site : 'ona.io'
@@ -44,7 +44,7 @@
             }
         };
 
-        query.group = 'interviewer_name';
+        query.group = 'given_consent/name_interviewer';
         query.name = 'interviewer_name';
         $scope.interviewer_data = ona.query(query);
         $scope.interviewerTable = {
@@ -62,7 +62,7 @@
             }
         };
 
-        query.group = 'village';
+        query.group = 'given_consent/area';
         query.name = 'village';
         $scope.village_data = ona.query(query);
         $scope.villageTable = {
@@ -80,7 +80,7 @@
             }
         };
 
-        query.group = 'ward';
+        query.group = 'given_consent/ward';
         query.name = 'ward';
         $scope.ward_data = ona.query(query);
         $scope.wardTable = {
