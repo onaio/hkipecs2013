@@ -7,7 +7,7 @@ from fabric.contrib import files
 DEPLOYMENTS = {
     'prod': {
         'home': '/var/www',
-        'host_string': 'ubuntu@hki.ona.io',
+        'host_string': 'ubuntu@hkipecs.onalabs.org',
         'project': 'hkipecs2013',
         'repo': 'git@github.com:onaio/hkipecs2013.git',
         'key_filename': [
