@@ -152,6 +152,14 @@ table tr th a{
 .show-tablet{ display:none; }
 
 /* Customize container */
+@media (max-width: 480px) {
+    .navbar-header a {
+        margin-right:0;
+    }
+    h3.area-txt {
+        margin-top:0;
+    }
+}
 @media (max-width: 768px) {
 	.navbar.navbar-inverse{
 		/*padding-bottom:1em;*/
