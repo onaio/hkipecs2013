@@ -20,7 +20,7 @@
                     controller: 'sahelCtrl'
                 })
                 .otherwise({
-                    redirectTo: 'est'
+                    redirectTo: '/mere_enq_est'
                 });
         }]);
 })();
