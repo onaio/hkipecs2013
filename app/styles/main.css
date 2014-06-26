@@ -24,6 +24,13 @@ table tr th a{
 	padding-right:1em;
 	text-decoration:none!important;
 }
+/*Alerts*/
+.data-section .alert{
+     margin:2em 1em 1em;
+     padding:0.6em 1em;
+     text-align:center;
+     width:80%;
+}
 /*Charts*/
 .chart{
 	width:50em;
