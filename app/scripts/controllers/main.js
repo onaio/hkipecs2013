@@ -3,8 +3,8 @@
 
     var pecsApp = angular.module('hkipecsApp');
 
-    pecsApp.controller('nigeriaCtrl', ["$scope", "$http", "$log", "OnadataService",
-    function($scope, $http, $log, ona) {
+    pecsApp.controller('nigeriaCtrl', ["$scope", "$http", "$log", "$q", "OnadataService",
+    function($scope, $http, $log, $q, ona) {
         $scope.$log = $log;
 
         $http.defaults.useXDomain = true;
@@ -97,5 +97,42 @@
                 directions : ['asc']
             }
         };
+
+        var villages = ['abakaliki', 'afikpo_north', 'afikpo_south', 'ebonyi',
+            'ezza_north', 'ezza_south', 'ikwo', 'ishielu', 'ivo', 'izzi',
+            'ohaozara', 'ohaukwu', 'onicha'];
+        var all_villages = [];
+        villages.map(function(village){
+            query.group = 'given_consent/' + village;
+            query.name = 'village';
+
+            var vdata = ona.query(query);
+            vdata.$promise.then(function(data){
+                console.log("loaded " + village);
+            });
+            all_villages.push(vdata.$promise);
+        });
+        var all_data = function(){
+            var deferred = $q.defer();
+
+            $q.all(all_villages).then(function(results){
+                console.log("all loaded");
+                var rec = [], i = 0, c = 0;
+                for(; i < results.length; i++){
+                    var value = results[i];
+                    for(c = 0; c < value.length; c++){
+                        console.log(value[c].village, value[c].count);
+                        if(value[c].village !== null){
+                            rec.push(value[c]);
+                        }
+                    }
+                }
+                $scope.village_data = rec;
+                deferred.resolve("Hello");
+            });
+            return deferred.promise;
+        };
+        $scope.pulldata = all_data();
+
     }]);
 })();
