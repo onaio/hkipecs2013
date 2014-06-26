@@ -23,6 +23,12 @@
         };
         query.name = 'date_interview';
         var interviewbyDate = ona.query(query);
+        
+        if(interviewbyDate == null){
+            $(".data-section .tab-pane").
+            html('<div class="alert alert-warning">No survey data added yet</div>');
+        }
+        
         $scope.date_interview_data = interviewbyDate;
         $scope.interviewDateTable = {
             data : 'date_interview_data',
@@ -115,6 +121,12 @@
         };
         query.name = 'date_interview';
         var interviewbyDate = ona.query(query);
+        
+        if(interviewbyDate == null){
+            $(".data-section .tab-pane").
+            html('<div class="alert alert-warning">No survey data added yet</div>');
+        }
+        
         $scope.date_interview_data = interviewbyDate;
         $scope.interviewDateTable = {
             data : 'date_interview_data',
