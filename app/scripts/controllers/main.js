@@ -26,7 +26,7 @@
         query.name = 'date_interview';
         var interviewbyDate = ona.query(query);
         
-        if(interviewbyDate.length == 0){
+        if(interviewbyDate == null){
             $(".data-section .tab-pane").
             html('<div class="alert alert-warning">No survey data added yet</div>');
         }
@@ -108,7 +108,7 @@
         query.name = 'date_interview';
         var interviewbyDate = ona.query(query);
         
-        if(interviewbyDate.length == 0){
+        if(interviewbyDate == null){
             $(".data-section .tab-pane").
             html('<div class="alert alert-warning">No survey data added yet</div>');
         }
