@@ -106,9 +106,11 @@
             var vdata = ona.query(query);
             vdata.$promise.then(function(data){
                 console.log("loaded " + village);
+                console.log(vdata);
             });
             all_villages.push(vdata.$promise);
         });
+        
         var all_data = function(){
             var deferred = $q.defer();
 
@@ -118,8 +120,8 @@
                 for(; i < results.length; i++){
                     var value = results[i];
                     for(c = 0; c < value.length; c++){
-                        console.log(value[c].village, value[c].count);
-                        if(value[c].village !== null){
+//                        console.log(value[c].village + ": "+value[c].count);
+                        if(value[c].village != null){
                             rec.push(value[c]);
                         }
                     }
