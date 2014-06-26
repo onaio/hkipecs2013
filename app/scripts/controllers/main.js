@@ -61,19 +61,7 @@
                 directions : ['asc']
             }
         };
-        
-        var village_groups = ["abakaliki","afikpo_north","afikpo_south","ebonyi","ezza_north",
-                            "ezza_south","ikwo","ishielu","ivo","izzi","ohaozara","ohaukwu","onicha"];
-        var obj_array = {};
-        
-        for(var g=0; g<village_groups.length; g++){
-            query.group = 'given_consent/'+village_groups[g];
-            query.name = 'village';
-            $scope.village_data = ona.query(query);
-            
-            console.log($scope.village_data);
-        }
-        
+
         $scope.villageTable = {
             data : 'village_data',
             columnDefs : [{
