@@ -20,17 +20,17 @@
         var query = {
             group: 'date',
             user: 'hkiburkinadata',
-            formid: 'mere_enq_Est_form',
+            formid: 'mere_enq_Est_final',
             site: 'ona.io'
         };
         query.name = 'date_interview';
         var interviewbyDate = ona.query(query);
-        
+
         if(interviewbyDate == null){
             $(".data-section .tab-pane").
             html('<div class="alert alert-warning">No survey data added yet</div>');
         }
-        
+
         $scope.date_interview_data = interviewbyDate;
         $scope.interviewDateTable = {
             data : 'date_interview_data',
@@ -84,7 +84,7 @@
             }
         };
     }]);
-             
+
     pecsApp.controller('sahelCtrl', ["$scope", "$http", "$log", "OnadataService",
     function($scope, $http, $log, ona) {
         $scope.$log = $log;
@@ -102,17 +102,17 @@
         var query = {
             group: 'date',
             user: 'hkiburkinadata',
-            formid: 'mere_enq_sahel_form',
+            formid: 'mere_enq_sahel_final',
             site: 'ona.io'
         };
         query.name = 'date_interview';
         var interviewbyDate = ona.query(query);
-        
+
         if(interviewbyDate == null){
             $(".data-section .tab-pane").
             html('<div class="alert alert-warning">No survey data added yet</div>');
         }
-        
+
         $scope.date_interview_data = interviewbyDate;
         $scope.interviewDateTable = {
             data : 'date_interview_data',
@@ -166,5 +166,5 @@
             }
         };
     }]);
-    
+
 })();
