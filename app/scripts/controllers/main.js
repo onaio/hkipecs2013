@@ -18,7 +18,7 @@
         $scope.interviewer_label = 'Nome do entrevistador';
 
         var query = {
-            group: 'data',
+            group: 'start_survey/data',
             user: 'hkimozambiquedata',
             formid: 'Maes_2014',
             site: 'ona.io'
@@ -42,7 +42,7 @@
             }
         };
 
-        query.group = 'entrevista';
+        query.group = 'start_survey/entrevista';
         query.name = 'interviewer_name';
         $scope.interviewer_data = ona.query(query);
         $scope.interviewerTable = {
@@ -60,7 +60,7 @@
             }
         };
 
-        query.group = 'bairro';
+        query.group = 'start_survey/bairro';
         query.name = 'village';
         $scope.village_data = ona.query(query);
         $scope.villageTable = {
