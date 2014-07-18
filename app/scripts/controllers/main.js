@@ -21,6 +21,7 @@
             group: 'date',
             user: 'hkiburkinadata',
             formid: 'mere_enq_Est_final',
+            form_pk: '3035',
             site: 'ona.io'
         };
         query.name = 'date_interview';
@@ -103,6 +104,7 @@
             group: 'date',
             user: 'hkiburkinadata',
             formid: 'mere_enq_sahel_final',
+            form_pk: '3034',
             site: 'ona.io'
         };
         query.name = 'date_interview';
