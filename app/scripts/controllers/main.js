@@ -19,16 +19,17 @@
             group : 'consent_group/date_interview',
             user : 'hkinigeriadata',
             formid : 'caretaker_Akwa_IBOMM',
+            form_pk: 557,
             site : 'ona.io'
         };
         query.name = 'date_interview';
         var interviewbyDate = ona.query(query);
-        
-        if(interviewbyDate == null){
+
+        if(interviewbyDate === null){
             $(".data-section .tab-pane").
             html('<div class="alert alert-warning">No survey data added yet</div>');
         }
-        
+
         $scope.date_interview_data = interviewbyDate;
         $scope.interviewDateTable = {
             data : 'date_interview_data',
@@ -121,12 +122,12 @@
         };
         query.name = 'date_interview';
         var interviewbyDate = ona.query(query);
-        
+
         if(interviewbyDate == null){
             $(".data-section .tab-pane").
             html('<div class="alert alert-warning">No survey data added yet</div>');
         }
-        
+
         $scope.date_interview_data = interviewbyDate;
         $scope.interviewDateTable = {
             data : 'date_interview_data',
