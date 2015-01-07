@@ -10,7 +10,7 @@
         $http.defaults.useXDomain = true;
         delete $http.defaults.headers.common['X-Requested-With'];
         // onadata api token
-        $http.defaults.headers.common.Authorization = 'Token 7468abd7e98236c3609e3edb242cd23606304d5e';
+        $http.defaults.headers.common.Authorization = 'Token a636902e21215d96989879e1f1bfd3194eaff951';
 
         $scope.survey = {};
         $scope.country = "Democratic Republic of Congo";
