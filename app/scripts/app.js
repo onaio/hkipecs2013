@@ -12,11 +12,11 @@
         .config(["$routeProvider", "$httpProvider", function ($routeProvider, $httpProvider) {
             $routeProvider
                 .when('/nigeria', {
-                    templateUrl: 'views/nigeria.html',
+                    templateUrl: 'views/drc.html',
                     controller: 'nigeriaCtrl'
                 })
                 .when('/benue', {
-                    templateUrl: 'views/nigeria.html',
+                    templateUrl: 'views/drc.html',
                     controller: 'benueCtrl'
                 })
                 .otherwise({
