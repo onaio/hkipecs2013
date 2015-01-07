@@ -13,7 +13,7 @@
         $http.defaults.headers.common.Authorization = 'Token a636902e21215d96989879e1f1bfd3194eaff951';
 
         $scope.survey = {};
-        $scope.country = "Democratic Republic of Congo";
+        $scope.country = "DRC";
 		
 		// forms_pk & formid
 		var formsData = {

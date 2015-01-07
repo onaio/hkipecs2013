@@ -5,7 +5,8 @@ function customShowTab(e){
 }
 
 var navlinks = $("#ctr_nav li"),
-    formlinks = $("#form-dropdown a");
+    droplinks = $("#form-dropdown a"),
+    formlinks = $("#form-dropdown .dropdown-menu li a");
 
 navlinks.click(function(e){
     navlinks.removeClass("active");
@@ -15,7 +16,15 @@ navlinks.click(function(e){
     $('li a[href="'+navhref +'"]').parent().addClass("active");
 });
 
-formlinks.click(function(e){
-
+droplinks.click(function(e){
     e.preventDefault();
+});
+
+formlinks.click(function(){
+    
+    var formid = $(this).text();
+    var formpk = $(this).data("formpk");
+    
+    $(this).addClass('.current-droplink');
+    $(".current-form").text(formid + " (" + formpk + ")");
 });
