@@ -3,7 +3,7 @@
 
     var pecsApp = angular.module('hkipecsApp');
 
-    pecsApp.controller('nigeriaCtrl', ["$scope", "$http", "$log", "OnadataService",
+    pecsApp.controller('congoCtrl', ["$scope", "$http", "$log", "OnadataService",
     function($scope, $http, $log, ona) {
         $scope.$log = $log;
 
@@ -14,14 +14,23 @@
 
         $scope.survey = {};
         $scope.country = "Democratic Republic of Congo";
-
+		
+		// forms_pk & formid
+		var formsData = {
+			22438: 'Menage_R2_2014_TR',
+			22436: 'Distributeur_R2_2014_TR',
+			22437 : 'IT_R2_2014_TR',
+			22439 : 'Leaders_Communitaire_R2_2014_TR'
+		};
+		
         var query = {
             group : 'consent_group/date_interview',
             user : 'hkidrcdata',
-            formid : 'caretaker_Akwa_IBOMM',
-            form_pk: 557,
+            formid : 'Menage_R2_2014_TR',
+            form_pk: 22438,
             site : 'ona.io'
         };
+		
         query.name = 'date_interview';
         var interviewbyDate = ona.query(query);
 
