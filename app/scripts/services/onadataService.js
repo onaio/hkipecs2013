@@ -7,7 +7,7 @@
           return $resource(
               'https://:site/api/v1/stats/:form_pk',
               {user: 'demouser', form_pk: '123', site: 'ona.io'},
-              {query: {method: 'GET', params: {group: 'enqueteur'}, withCredentials: true, isArray: true}}
+              {query: {method: 'GET', params: {}, withCredentials: true, isArray: true}}
           );
       }]);
 })();

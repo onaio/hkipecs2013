@@ -25,18 +25,16 @@
         $scope.loadFormData = function(formpk){
             console.log("Key: " + $scope.formsData[formpk]);
         };
-        
-        console.log('Get data from: ' + $scope.formsData[22438]);
 		
         var query = {
-            group : 'consent_group/date_interview',
-            user : 'hkidrcdata',
-            formid : 'Distributeur_R2_2014_TR',
-            form_pk: 22436,
+           
+			user : 'hkidrcdata',
+            formid : 'Distributeur_R2_2014_TR2',
+            form_pk: 22729,
             site : 'ona.io'
         };
 		
-        query.name = 'date_interview';
+        query.name = 'A6';
         var interviewbyDate = ona.query(query);
 
         if(interviewbyDate === null){
@@ -44,75 +42,23 @@
             html('<div class="alert alert-warning">No survey data added yet</div>');
         }
 
-        $scope.date_interview_data = interviewbyDate;
-        $scope.interviewDateTable = {
-            data : 'date_interview_data',
+        $scope.drc_survey_data = interviewbyDate;
+        $scope.surveyTable = {
+            data : 'drc_survey_data',
             columnDefs : [{
-                field : 'date_interview',
+                field : 'today',
                 displayName : 'Date of Interview',
                 cellFilter : 'date'
             }, {
-                field : 'count',
-                displayName : 'No. of Surveys'
-            }],
-            sortInfo : {
-                fields : ['date_interview'],
-                directions : ['asc']
-            }
-        };
-
-        query.group = 'consent_group/interviewer_name';
-        query.name = 'interviewer_name';
-        $scope.interviewer_data = ona.query(query);
-        $scope.interviewerTable = {
-            data : 'interviewer_data',
-            columnDefs : [{
-                field : 'interviewer_name',
-                displayName : 'Interviewer'
+                field : 'A6',
+                displayName : 'Name of Interviewer (Nom du Enqueteur)'
             }, {
-                field : 'count',
-                displayName : 'No. of Surveys'
-            }],
-            sortInfo : {
-                fields : ['interviewer_name'],
-                directions : ['asc']
-            }
-        };
-
-        query.group = 'consent_group/village';
-        query.name = 'village';
-        $scope.village_data = ona.query(query);
-        $scope.villageTable = {
-            data : 'village_data',
-            columnDefs : [{
-                field : 'village',
-                displayName : 'Village'
+                field : 'aire',
+                displayName : 'Area (Aire de Sante)'
             }, {
-                field : 'count',
-                displayName : 'No. of Surveys'
-            }],
-            sortInfo : {
-                fields : ['village'],
-                directions : ['asc']
-            }
-        };
-
-        query.group = 'consent_group/village_LGA';
-        query.name = 'ward';
-        $scope.wards = ona.query(query);
-        $scope.wardTable = {
-            data : 'wards',
-            columnDefs : [{
-                field : 'ward',
-                displayName : 'Ward'
-            }, {
-                field : 'count',
-                displayName : 'No. of Surveys'
-            }],
-            sortInfo : {
-                fields : ['ward'],
-                directions : ['asc']
-            }
+                field : 'grappe',
+                displayName : 'Cluster (Village/Quartier avenue/grappes)'
+            }]
         };
     }]);
 })();
