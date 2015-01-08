@@ -11,7 +11,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="//fonts.googleapis.com/css?family=Open+Sans:400,700">
 <link rel="icon" href="favicon.ico">
-<link rel="stylesheet" href="styles/ece34601.main.css"/>
+<link rel="stylesheet" href="styles/86fd9039.main.css"/>
 </head>
 <body ng-app="hkipecsApp">
     <!--[if lt IE 7]>
@@ -34,25 +34,27 @@
                 <span class="icon-bar"></span>
               </button>
               <a class="navbar-brand" href="#">
-                  <strong>HKI PECs</strong> NIGERIA
+                  <strong>HKI PECs</strong> DRC
                 </a>
             </div>
 			<div class="collapse navbar-collapse" id="menu-navbar-collapse-1">
                 <ul class="nav navbar-nav headpad hide-tablet" id="ctr_nav">
-                    <li class="active">
-                        <a href="#nigeria">Nigeria</a>
-                    </li>
-                    <li>
-                        <a href="#benue">Benue</a>
-                    </li>
+					<li class="dropdown" id="form-dropdown">
+					  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                         <span class="current-form">Select a Form</span> <span class="caret"></span>
+					  </a>
+					  <ul class="dropdown-menu" role="menu">
+						<li><a href="#" data-formpk="22438">Menage_R2_2014_TR</a></li>
+						<li><a href="#" data-formpk="22436">Distributeur_R2_2014_TR</a></li>
+						<li><a href="#" data-formpk="22437">IT_R2_2014_TR</a></li>
+						<li><a href="#" data-formpk="22439">Leaders_Communitaire_R2_2014_TR</a></li>
+					  </ul>
+					</li>
                 </ul>
 
                 <ul class="nav navbar-nav headpad show-tablet" id="ctr_nav">
                     <li class="active">
-                        <a href="#nigeria" data-toggle="collapse" data-target="#menu-navbar-collapse-1">Nigeria</a>
-                    </li>
-                    <li>
-                        <a href="#benue" data-toggle="collapse" data-target="#menu-navbar-collapse-1">Benue</a>
+                        <a href="#drc" data-toggle="collapse" data-target="#menu-navbar-collapse-1">DRC</a>
                     </li>
                 </ul>
 
@@ -88,6 +90,6 @@
 
     <script src="scripts/ff945ce0.modules.js"></script>
 
-    <script src="scripts/71f209eb.scripts.js"></script>
+    <script src="scripts/2f7e33b7.scripts.js"></script>
 </body>
 </html>
