@@ -24,6 +24,10 @@ table tr th a{
 	padding-right:1em;
 	text-decoration:none!important;
 }
+.t-normal{
+    font-weight:normal;
+}
+
 /*Alerts*/
 .data-section .alert{
     margin:2em 1em 1em;

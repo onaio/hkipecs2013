@@ -14,20 +14,25 @@
 
         $scope.survey = {};
         $scope.country = "DRC";
-		
-		// forms_pk & formid
-		var formsData = {
+        
+        $scope.formsData = {
 			22438: 'Menage_R2_2014_TR',
 			22436: 'Distributeur_R2_2014_TR',
 			22437 : 'IT_R2_2014_TR',
 			22439 : 'Leaders_Communitaire_R2_2014_TR'
 		};
+        
+        $scope.loadFormData = function(formpk){
+            console.log("Key: " + $scope.formsData[formpk]);
+        };
+        
+        console.log('Get data from: ' + $scope.formsData[22438]);
 		
         var query = {
             group : 'consent_group/date_interview',
             user : 'hkidrcdata',
-            formid : 'Menage_R2_2014_TR',
-            form_pk: 22438,
+            formid : 'Distributeur_R2_2014_TR',
+            form_pk: 22436,
             site : 'ona.io'
         };
 		
