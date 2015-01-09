@@ -1,5 +1,5 @@
 /**
- * @license AngularJS v1.2.19-build.251+sha.24aee81
+ * @license AngularJS v1.2.18
  * (c) 2010-2014 Google, Inc. http://angularjs.org
  * License: MIT
  */
@@ -68,7 +68,7 @@ function minErr(module) {
       return match;
     });
 
-    message = message + '\nhttp://errors.angularjs.org/1.2.19-build.251+sha.24aee81/' +
+    message = message + '\nhttp://errors.angularjs.org/1.2.18/' +
       (module ? module + '/' : '') + code;
     for (i = 2; i < arguments.length; i++) {
       message = message + (i == 2 ? '?' : '&') + 'p' + (i-2) + '=' +
@@ -1953,11 +1953,11 @@ function setupModuleLoader(window) {
  * - `codeName` – `{string}` – Code name of the release, such as "jiggling-armfat".
  */
 var version = {
-  full: '1.2.19-build.251+sha.24aee81',    // all of these placeholder strings will be replaced by grunt's
+  full: '1.2.18',    // all of these placeholder strings will be replaced by grunt's
   major: 1,    // package task
   minor: 2,
-  dot: 19,
-  codeName: 'snapshot'
+  dot: 18,
+  codeName: 'ear-extendability'
 };
 
 
@@ -21609,7 +21609,7 @@ var selectDirective = ['$compile', '$parse', function($compile,   $parse) {
                   // rather then the element.
                   (element = optionTemplate.clone())
                       .val(option.id)
-                      .prop('selected', option.selected)
+                      .attr('selected', option.selected)
                       .text(option.label);
                 }
 

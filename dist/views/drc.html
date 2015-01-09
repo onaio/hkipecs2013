@@ -1,6 +1,9 @@
 <div class="container">
 	<br><br>
-	<h3 class="area-txt"><i class="glyphicon glyphicon-map-marker"></i> {{country}}</h3>
+	<h3 class="area-txt"><i class="glyphicon glyphicon-map-marker"></i> 
+        {{country}} &nbsp;&middot;&nbsp;
+        <span class="current-form-header t-normal">{{ current_form }}</span>
+    </h3>
 	<br>
 	
     <div class="data-section">
@@ -13,60 +16,51 @@
                 <ul class="dropdown-menu" id="surveyByOptions">
                     <li class="active"><a href="#dateinterview" data-toggle="tab">Date of Interview</a></li>
                     <li><a href="#byinterviewer" data-toggle="tab">Interviewer</a></li>
-                    <li><a href="#village" data-toggle="tab">Village</a></li>
-                    <li><a href="#ward" data-toggle="tab">LGA</a></li>
+                    <li><a href="#area" data-toggle="tab">Village</a></li>
+                    <li><a href="#cluster" data-toggle="tab">LGA</a></li>
                 </ul>
             </li>
         </ul>
 
         <ul class="nav nav-tabs hide-tablet" id="summarytabs">
-          <li class="active"><a href="#dateinterview" data-toggle="tab">Survey by Date of Interview</a></li>
-          <li><a href="#byinterviewer" data-toggle="tab">Survey by Interviewer</a></li>
-          <li><a href="#village" data-toggle="tab">Survey by Village</a></li>
-          <li><a href="#ward" data-toggle="tab">Survey by LGA</a></li>
+			<li class="active"><a href="#dateinterview" data-toggle="tab">Survey by Date of Interview</a></li>
+			<li><a href="#byinterviewer" data-toggle="tab">Survey by Interviewer</a></li>
+			<li><a href="#area" data-toggle="tab">Survey by Aire de Sante</a></li>
+			<li><a href="#cluster" data-toggle="tab">Survey by Cluster</a></li>
         </ul>
 
         <!-- Tab panes -->
         <div class="tab-content clearfix">
-          <div class="tab-pane active clearfix" id="dateinterview">
-            <div class="col-md-6">
-                <div ng-grid="interviewDateTable" class="clearfix"></div>
-            </div>
-            <div class="col-md-6">
-
-            </div>
-          </div>
-          <div class="tab-pane" id="byinterviewer">
-            <div class="col-md-6">
-                <div ng-grid="interviewerTable" class="clearfix"></div>
-            </div>
-            <div class="col-md-6">
-
-            </div>
-          </div>
-          <div class="tab-pane" id="village">
-            <div class="col-md-6">
-                <div ng-grid="villageTable" class="clearfix"></div>
-            </div>
-            <div class="col-md-6">
-
-            </div>
-          </div>
-          <div class="tab-pane" id="ward">
-            <div class="col-md-6">
-                <div ng-grid="wardTable" class="clearfix"></div>
-            </div>
-            <div class="col-md-6">
-
-            </div>
-          </div>
+			<div class="tab-pane active clearfix" id="dateinterview">
+				<div class="col-md-6">
+					<div ng-grid="interviewDateTable" class="clearfix"></div>
+				</div>
+			</div>
+			
+			<div class="tab-pane clearfix" id="byinterviewer">
+				<div class="col-md-6">
+					<div ng-grid="interviewerTable" class="clearfix"></div>
+				</div>
+			</div>
+			
+			<div class="tab-pane clearfix" id="area">
+				<div class="col-md-6">
+					<div ng-grid="airesTable" class="clearfix"></div>
+				</div>
+			</div>
+			
+			<div class="tab-pane clearfix" id="cluster">
+				<div class="col-md-6">
+					<div ng-grid="clusterTable" class="clearfix"></div>
+				</div>
+			</div>
         </div>
     </div>
 </div>
 
 <div class="footer">
 	<div class="container">
-		<img src="images/99d94f9e.hki-logotype.png" alt="HKI Logo" class="show-tablet img-responsive">
+		<img src="images/386dde05.hki-logotype.png" alt="HKI Logo" class="show-tablet img-responsive">
 	    <p class="copyright">&copy; Helen Keller International, 2013</p>
 	</div>
 </div>
