@@ -27,14 +27,14 @@
         };
 		
         var query = {
-           
+            group: 'aire',
 			user : 'hkidrcdata',
-            formid : 'Distributeur_R2_2014_TR2',
+//            formid : 'Distributeur_R2_2014_TR2',
             form_pk: 22729,
             site : 'ona.io'
         };
 		
-        query.name = 'A6';
+        query.name = 'aire';
         var interviewbyDate = ona.query(query);
 
         if(interviewbyDate === null){
