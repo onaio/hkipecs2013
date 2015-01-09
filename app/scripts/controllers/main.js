@@ -14,6 +14,7 @@
 
         $scope.survey = {};
         $scope.country = "DRC";
+        $scope.current_form = "Distributeur_R2_2014_TR2";
         
         $scope.formsData = {
 			'Menage_R2_2014_TR' : 22438,
