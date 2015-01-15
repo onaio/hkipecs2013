@@ -15,6 +15,18 @@
                     templateUrl: 'views/drc.html',
                     controller: 'congoCtrl'
                 })
+                .when('/Menage', {
+                    templateUrl: 'views/drc.html',
+                    controller: 'menageCtrl'
+                })
+                .when('/IT', {
+                    templateUrl: 'views/drc.html',
+                    controller: 'itCtrl'
+                })
+                .when('/Leaders_Communitaire', {
+                    templateUrl: 'views/drc.html',
+                    controller: 'leadersCtrl'
+                })
                 .otherwise({
                     redirectTo: '/drc'
                 });
