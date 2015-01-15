@@ -21,7 +21,6 @@ droplinks.click(function(e){
 });
 
 formlinks.click(function(){
-    
     var formid = $(this).text();
     var formpk = $(this).data("formpk");
     
