@@ -15,97 +15,97 @@
         $scope.survey = {};
         $scope.country = "DRC";
         $scope.current_form = "Distributeur_R2_2014_FINAL";
-		
-		$scope.isStatsAvailable = function(data){
-			if(data === null || data === ''){
-				$(".data-section .tab-pane").
-            	html('<div class="alert alert-warning">No survey data added yet</div>');
-			}
-		};
-		
-		// form defaults
+
+        $scope.isStatsAvailable = function(data){
+            if(data === null || data === ''){
+                $(".data-section .tab-pane").
+                html('<div class="alert alert-warning">No survey data added yet</div>');
+            }
+        };
+
+        // form defaults
         var query = {
-			group: 'today',
-			user : 'hkidrcdata',
+            group: 'today',
+            user : 'hkidrcdata',
             form_pk: 23624,
             site : 'ona.io'
         };
-		
-		var interviewbyDate = ona.query(query);
 
-		$scope.date_interview_data = [];
-		$scope.date_interview_data = interviewbyDate;
-		$scope.interviewDateTable = {
-			data : 'date_interview_data',
-			columnDefs : [{
-				field : 'today',
-				displayName : 'Date of Interview',
-				cellFilter : 'date'
-			}, {
-				field : 'count',
-				displayName : 'No. of Surveys'
-			}]
-		};
+        var interviewbyDate = ona.query(query);
 
-		query.group = 'A6';
-		query.name = 'A6';
-		var interviewers = ona.query(query);
-		//$scope.isStatsAvailable(interviewers);
+        $scope.date_interview_data = [];
+        $scope.date_interview_data = interviewbyDate;
+        $scope.interviewDateTable = {
+            data : 'date_interview_data',
+            columnDefs : [{
+                field : 'today',
+                displayName : 'Date of Interview',
+                cellFilter : 'date'
+            }, {
+                field : 'count',
+                displayName : 'No. of Surveys'
+            }]
+        };
 
-		$scope.interviewer_data = [];
-		$scope.interviewer_data = interviewers;
-		$scope.interviewerTable = {
-			data : 'interviewer_data',
-			columnDefs : [{
-				field : 'A6',
-				displayName : 'Name of Interviewer',
-			}, {
-				field : 'count',
-				displayName : 'No. of Surveys'
-			}]
-		};
+        query.group = 'enum_name';
+        query.name = 'enum_name';
+        var interviewers = ona.query(query);
+        //$scope.isStatsAvailable(interviewers);
 
-		query.group = 'aire';
-		query.name = 'aire';
-		var airesDeSante = ona.query(query);
-		//$scope.isStatsAvailable(airesDeSante);
+        $scope.interviewer_data = [];
+        $scope.interviewer_data = interviewers;
+        $scope.interviewerTable = {
+            data : 'interviewer_data',
+            columnDefs : [{
+                field : 'enum_name',
+                displayName : 'Name of Interviewer'
+            }, {
+                field : 'count',
+                displayName : 'No. of Surveys'
+            }]
+        };
 
-		$scope.aires_data = [];
-		$scope.aires_data = airesDeSante;
-		$scope.airesTable = {
-			data : 'aires_data',
-			columnDefs : [{
-				field : 'aire',
-				displayName : 'Area (Aire de Sante)',
-			}, {
-				field : 'count',
-				displayName : 'No. of Surveys'
-			}]
-		};
+        query.group = 'aire';
+        query.name = 'aire';
+        var airesDeSante = ona.query(query);
+        //$scope.isStatsAvailable(airesDeSante);
 
-		query.group = 'grappe';
-		query.name = 'grappe';
-		var clusters = ona.query(query);
-		//$scope.isStatsAvailable(interviewbyDate);
+        $scope.aires_data = [];
+        $scope.aires_data = airesDeSante;
+        $scope.airesTable = {
+            data : 'aires_data',
+            columnDefs : [{
+                field : 'aire',
+                displayName : 'Area (Aire de Sante)'
+            }, {
+                field : 'count',
+                displayName : 'No. of Surveys'
+            }]
+        };
 
-		$scope.cluster_data = [];
-		$scope.cluster_data = clusters;
-		$scope.clusterTable = {
-			data : 'cluster_data',
-			columnDefs : [{
-				field : 'grappe',
-				displayName : 'Cluster (Village/Quartier avenue /grappes)',
-			}, {
-				field : 'count',
-				displayName : 'No. of Surveys'
-			}]
-		};
+        query.group = 'grappe';
+        query.name = 'grappe';
+        var clusters = ona.query(query);
+        //$scope.isStatsAvailable(interviewbyDate);
+
+        $scope.cluster_data = [];
+        $scope.cluster_data = clusters;
+        $scope.clusterTable = {
+            data : 'cluster_data',
+            columnDefs : [{
+                field : 'grappe',
+                displayName : 'Cluster (Village/Quartier avenue /grappes)'
+            }, {
+                field : 'count',
+                displayName : 'No. of Surveys'
+            }]
+        };
     }]);
-			 
-	
-	/*
-	 * Menage_R2_2014
-	 */
+
+
+    /*
+     * Menage_R2_2014
+     */
     pecsApp.controller('menageCtrl', ["$scope", "$http", "$log", "OnadataService",
     function($scope, $http, $log, ona) {
         $scope.$log = $log;
@@ -118,98 +118,98 @@
         $scope.survey = {};
         $scope.country = "DRC";
         $scope.current_form = "Menage_R2_2014_FINAL";
-		
-		$scope.isStatsAvailable = function(data){
-			if(data === null || data === ''){
-				$(".data-section .tab-pane").
-            	html('<div class="alert alert-warning">No survey data added yet</div>');
-			}
-		};
-		
-		// form defaults
+
+        $scope.isStatsAvailable = function(data){
+            if(data === null || data === ''){
+                $(".data-section .tab-pane").
+                html('<div class="alert alert-warning">No survey data added yet</div>');
+            }
+        };
+
+        // form defaults
         var query = {
-			group: 'today',
-			user : 'hkidrcdata',
+            group: 'today',
+            user : 'hkidrcdata',
             form_pk: 23616,
             site : 'ona.io'
         };
 
-		var interviewbyDate = ona.query(query);
+        var interviewbyDate = ona.query(query);
 
-		$scope.date_interview_data = [];
-		$scope.date_interview_data = interviewbyDate;
-		$scope.interviewDateTable = {
-			data : 'date_interview_data',
-			columnDefs : [{
-				field : 'today',
-				displayName : 'Date of Interview',
-				cellFilter : 'date'
-			}, {
-				field : 'count',
-				displayName : 'No. of Surveys'
-			}]
-		};
+        $scope.date_interview_data = [];
+        $scope.date_interview_data = interviewbyDate;
+        $scope.interviewDateTable = {
+            data : 'date_interview_data',
+            columnDefs : [{
+                field : 'today',
+                displayName : 'Date of Interview',
+                cellFilter : 'date'
+            }, {
+                field : 'count',
+                displayName : 'No. of Surveys'
+            }]
+        };
 
-		query.group = 'A6';
-		query.name = 'A6';
-		var interviewers = ona.query(query);
-		//$scope.isStatsAvailable(interviewers);
+        query.group = 'enum_name';
+        query.name = 'enum_name';
+        var interviewers = ona.query(query);
+        //$scope.isStatsAvailable(interviewers);
 
-		$scope.interviewer_data = [];
-		$scope.interviewer_data = interviewers;
-		$scope.interviewerTable = {
-			data : 'interviewer_data',
-			columnDefs : [{
-				field : 'A6',
-				displayName : 'Name of Interviewer',
-			}, {
-				field : 'count',
-				displayName : 'No. of Surveys'
-			}]
-		};
+        $scope.interviewer_data = [];
+        $scope.interviewer_data = interviewers;
+        $scope.interviewerTable = {
+            data : 'interviewer_data',
+            columnDefs : [{
+                field : 'enum_name',
+                displayName : 'Name of Interviewer',
+            }, {
+                field : 'count',
+                displayName : 'No. of Surveys'
+            }]
+        };
 
-		query.group = 'aire';
-		query.name = 'aire';
-		var airesDeSante = ona.query(query);
-		//$scope.isStatsAvailable(airesDeSante);
+        query.group = 'aire';
+        query.name = 'aire';
+        var airesDeSante = ona.query(query);
+        //$scope.isStatsAvailable(airesDeSante);
 
-		$scope.aires_data = [];
-		$scope.aires_data = airesDeSante;
-		$scope.airesTable = {
-			data : 'aires_data',
-			columnDefs : [{
-				field : 'aire',
-				displayName : 'Area (Aire de Sante)',
-			}, {
-				field : 'count',
-				displayName : 'No. of Surveys'
-			}]
-		};
+        $scope.aires_data = [];
+        $scope.aires_data = airesDeSante;
+        $scope.airesTable = {
+            data : 'aires_data',
+            columnDefs : [{
+                field : 'aire',
+                displayName : 'Area (Aire de Sante)',
+            }, {
+                field : 'count',
+                displayName : 'No. of Surveys'
+            }]
+        };
 
-		query.group = 'grappe';
-		query.name = 'grappe';
-		var clusters = ona.query(query);
-		//$scope.isStatsAvailable(interviewbyDate);
+        query.group = 'grappe';
+        query.name = 'grappe';
+        var clusters = ona.query(query);
+        //$scope.isStatsAvailable(interviewbyDate);
 
-		$scope.cluster_data = [];
-		$scope.cluster_data = clusters;
-		$scope.clusterTable = {
-			data : 'cluster_data',
-			columnDefs : [{
-				field : 'grappe',
-				displayName : 'Cluster (Village/Quartier avenue /grappes)',
-			}, {
-				field : 'count',
-				displayName : 'No. of Surveys'
-			}]
-		};
+        $scope.cluster_data = [];
+        $scope.cluster_data = clusters;
+        $scope.clusterTable = {
+            data : 'cluster_data',
+            columnDefs : [{
+                field : 'grappe',
+                displayName : 'Cluster (Village/Quartier avenue /grappes)',
+            }, {
+                field : 'count',
+                displayName : 'No. of Surveys'
+            }]
+        };
     }]);
-			 
-			 
-	
-	/*
-	 * IT_R2_2014
-	 */
+
+
+
+    /*
+     * IT_R2_2014
+     */
     pecsApp.controller('itCtrl', ["$scope", "$http", "$log", "OnadataService",
     function($scope, $http, $log, ona) {
         $scope.$log = $log;
@@ -222,98 +222,98 @@
         $scope.survey = {};
         $scope.country = "DRC";
         $scope.current_form = "IT_R2_2014_FINAL";
-		
-		$scope.isStatsAvailable = function(data){
-			if(data === null || data === ''){
-				$(".data-section .tab-pane").
-            	html('<div class="alert alert-warning">No survey data added yet</div>');
-			}
-		};
-		
-		// form defaults
+
+        $scope.isStatsAvailable = function(data){
+            if(data === null || data === ''){
+                $(".data-section .tab-pane").
+                html('<div class="alert alert-warning">No survey data added yet</div>');
+            }
+        };
+
+        // form defaults
         var query = {
-			group: 'today',
-			user : 'hkidrcdata',
+            group: 'today',
+            user : 'hkidrcdata',
             form_pk: 23620,
             site : 'ona.io'
         };
 
-		var interviewbyDate = ona.query(query);
+        var interviewbyDate = ona.query(query);
 
-		$scope.date_interview_data = [];
-		$scope.date_interview_data = interviewbyDate;
-		$scope.interviewDateTable = {
-			data : 'date_interview_data',
-			columnDefs : [{
-				field : 'today',
-				displayName : 'Date of Interview',
-				cellFilter : 'date'
-			}, {
-				field : 'count',
-				displayName : 'No. of Surveys'
-			}]
-		};
+        $scope.date_interview_data = [];
+        $scope.date_interview_data = interviewbyDate;
+        $scope.interviewDateTable = {
+            data : 'date_interview_data',
+            columnDefs : [{
+                field : 'today',
+                displayName : 'Date of Interview',
+                cellFilter : 'date'
+            }, {
+                field : 'count',
+                displayName : 'No. of Surveys'
+            }]
+        };
 
-		query.group = 'A6';
-		query.name = 'A6';
-		var interviewers = ona.query(query);
-		//$scope.isStatsAvailable(interviewers);
+        query.group = 'enum_name';
+        query.name = 'enum_name';
+        var interviewers = ona.query(query);
+        //$scope.isStatsAvailable(interviewers);
 
-		$scope.interviewer_data = [];
-		$scope.interviewer_data = interviewers;
-		$scope.interviewerTable = {
-			data : 'interviewer_data',
-			columnDefs : [{
-				field : 'A6',
-				displayName : 'Name of Interviewer',
-			}, {
-				field : 'count',
-				displayName : 'No. of Surveys'
-			}]
-		};
+        $scope.interviewer_data = [];
+        $scope.interviewer_data = interviewers;
+        $scope.interviewerTable = {
+            data : 'interviewer_data',
+            columnDefs : [{
+                field : 'enum_name',
+                displayName : 'Name of Interviewer'
+            }, {
+                field : 'count',
+                displayName : 'No. of Surveys'
+            }]
+        };
 
-		query.group = 'aire';
-		query.name = 'aire';
-		var airesDeSante = ona.query(query);
-		//$scope.isStatsAvailable(airesDeSante);
+        query.group = 'aire';
+        query.name = 'aire';
+        var airesDeSante = ona.query(query);
+        //$scope.isStatsAvailable(airesDeSante);
 
-		$scope.aires_data = [];
-		$scope.aires_data = airesDeSante;
-		$scope.airesTable = {
-			data : 'aires_data',
-			columnDefs : [{
-				field : 'aire',
-				displayName : 'Area (Aire de Sante)',
-			}, {
-				field : 'count',
-				displayName : 'No. of Surveys'
-			}]
-		};
+        $scope.aires_data = [];
+        $scope.aires_data = airesDeSante;
+        $scope.airesTable = {
+            data : 'aires_data',
+            columnDefs : [{
+                field : 'aire',
+                displayName : 'Area (Aire de Sante)'
+            }, {
+                field : 'count',
+                displayName : 'No. of Surveys'
+            }]
+        };
 
-		query.group = 'grappe';
-		query.name = 'grappe';
-		var clusters = ona.query(query);
-		//$scope.isStatsAvailable(interviewbyDate);
+        query.group = 'grappe';
+        query.name = 'grappe';
+        var clusters = ona.query(query);
+        //$scope.isStatsAvailable(interviewbyDate);
 
-		$scope.cluster_data = [];
-		$scope.cluster_data = clusters;
-		$scope.clusterTable = {
-			data : 'cluster_data',
-			columnDefs : [{
-				field : 'grappe',
-				displayName : 'Cluster (Village/Quartier avenue /grappes)',
-			}, {
-				field : 'count',
-				displayName : 'No. of Surveys'
-			}]
-		};
+        $scope.cluster_data = [];
+        $scope.cluster_data = clusters;
+        $scope.clusterTable = {
+            data : 'cluster_data',
+            columnDefs : [{
+                field : 'grappe',
+                displayName : 'Cluster (Village/Quartier avenue /grappes)'
+            }, {
+                field : 'count',
+                displayName : 'No. of Surveys'
+            }]
+        };
     }]);
-			 
-			 
-	
-	/*
-	 * Leaders_Communitaire_R2_2014
-	 */
+
+
+
+    /*
+     * Leaders_Communitaire_R2_2014
+     */
     pecsApp.controller('leadersCtrl', ["$scope", "$http", "$log", "OnadataService",
     function($scope, $http, $log, ona) {
         $scope.$log = $log;
@@ -326,90 +326,90 @@
         $scope.survey = {};
         $scope.country = "DRC";
         $scope.current_form = "Leaders_Communitaire_R2_2014_FINAL";
-		
-		$scope.isStatsAvailable = function(data){
-			if(data === null || data === ''){
-				$(".data-section .tab-pane").
-            	html('<div class="alert alert-warning">No survey data added yet</div>');
-			}
-		};
-		
-		// form defaults
+
+        $scope.isStatsAvailable = function(data){
+            if(data === null || data === ''){
+                $(".data-section .tab-pane").
+                html('<div class="alert alert-warning">No survey data added yet</div>');
+            }
+        };
+
+        // form defaults
         var query = {
-			group: 'today',
-			user : 'hkidrcdata',
+            group: 'today',
+            user : 'hkidrcdata',
             form_pk: 23618,
             site : 'ona.io'
         };
 
-		var interviewbyDate = ona.query(query);
+        var interviewbyDate = ona.query(query);
 
-		$scope.date_interview_data = [];
-		$scope.date_interview_data = interviewbyDate;
-		$scope.interviewDateTable = {
-			data : 'date_interview_data',
-			columnDefs : [{
-				field : 'today',
-				displayName : 'Date of Interview',
-				cellFilter : 'date'
-			}, {
-				field : 'count',
-				displayName : 'No. of Surveys'
-			}]
-		};
+        $scope.date_interview_data = [];
+        $scope.date_interview_data = interviewbyDate;
+        $scope.interviewDateTable = {
+            data : 'date_interview_data',
+            columnDefs : [{
+                field : 'today',
+                displayName : 'Date of Interview',
+                cellFilter : 'date'
+            }, {
+                field : 'count',
+                displayName : 'No. of Surveys'
+            }]
+        };
 
-		query.group = 'A6';
-		query.name = 'A6';
-		var interviewers = ona.query(query);
-		//$scope.isStatsAvailable(interviewers);
+        query.group = 'enum_name';
+        query.name = 'enum_name';
+        var interviewers = ona.query(query);
+        //$scope.isStatsAvailable(interviewers);
 
-		$scope.interviewer_data = [];
-		$scope.interviewer_data = interviewers;
-		$scope.interviewerTable = {
-			data : 'interviewer_data',
-			columnDefs : [{
-				field : 'A6',
-				displayName : 'Name of Interviewer',
-			}, {
-				field : 'count',
-				displayName : 'No. of Surveys'
-			}]
-		};
+        $scope.interviewer_data = [];
+        $scope.interviewer_data = interviewers;
+        $scope.interviewerTable = {
+            data : 'interviewer_data',
+            columnDefs : [{
+                field : 'enum_name',
+                displayName : 'Name of Interviewer'
+            }, {
+                field : 'count',
+                displayName : 'No. of Surveys'
+            }]
+        };
 
-		query.group = 'aire';
-		query.name = 'aire';
-		var airesDeSante = ona.query(query);
-		//$scope.isStatsAvailable(airesDeSante);
+        query.group = 'aire';
+        query.name = 'aire';
+        var airesDeSante = ona.query(query);
+        //$scope.isStatsAvailable(airesDeSante);
 
-		$scope.aires_data = [];
-		$scope.aires_data = airesDeSante;
-		$scope.airesTable = {
-			data : 'aires_data',
-			columnDefs : [{
-				field : 'aire',
-				displayName : 'Area (Aire de Sante)',
-			}, {
-				field : 'count',
-				displayName : 'No. of Surveys'
-			}]
-		};
+        $scope.aires_data = [];
+        $scope.aires_data = airesDeSante;
+        $scope.airesTable = {
+            data : 'aires_data',
+            columnDefs : [{
+                field : 'aire',
+                displayName : 'Area (Aire de Sante)'
+            }, {
+                field : 'count',
+                displayName : 'No. of Surveys'
+            }]
+        };
 
-		query.group = 'grappe';
-		query.name = 'grappe';
-		var clusters = ona.query(query);
-		//$scope.isStatsAvailable(interviewbyDate);
+        query.group = 'grappe';
+        query.name = 'grappe';
+        var clusters = ona.query(query);
+        //$scope.isStatsAvailable(interviewbyDate);
 
-		$scope.cluster_data = [];
-		$scope.cluster_data = clusters;
-		$scope.clusterTable = {
-			data : 'cluster_data',
-			columnDefs : [{
-				field : 'grappe',
-				displayName : 'Cluster (Village/Quartier avenue /grappes)',
-			}, {
-				field : 'count',
-				displayName : 'No. of Surveys'
-			}]
-		};
+        $scope.cluster_data = [];
+        $scope.cluster_data = clusters;
+        $scope.clusterTable = {
+            data : 'cluster_data',
+            columnDefs : [{
+                field : 'grappe',
+                displayName : 'Cluster (Village/Quartier avenue /grappes)'
+            }, {
+                field : 'count',
+                displayName : 'No. of Surveys'
+            }]
+        };
     }]);
 })();
