@@ -100,6 +100,24 @@
                 displayName : 'No. of Surveys'
             }]
         };
+
+        query.group = 'A7Presentation';
+        query.name = 'A7Presentation';
+        var a7 = ona.query(query);
+        //$scope.isStatsAvailable(interviewbyDate);
+
+        $scope.a7_data = [];
+        $scope.a7_data = a7;
+        $scope.a7Table = {
+            data : 'a7_data',
+            columnDefs : [{
+                field : 'A7Presentation',
+                displayName : 'numero de menage (A7)'
+            }, {
+                field : 'count',
+                displayName : 'No. of Surveys'
+            }]
+        };
     }]);
 
 
@@ -198,6 +216,24 @@
             columnDefs : [{
                 field : 'grappe',
                 displayName : 'Cluster (Village/Quartier avenue /grappes)',
+            }, {
+                field : 'count',
+                displayName : 'No. of Surveys'
+            }]
+        };
+
+        query.group = 'A7';
+        query.name = 'A7';
+        var a7 = ona.query(query);
+        //$scope.isStatsAvailable(interviewbyDate);
+
+        $scope.a7_data = [];
+        $scope.a7_data = a7;
+        $scope.a7Table = {
+            data : 'a7_data',
+            columnDefs : [{
+                field : 'A7',
+                displayName : 'numero de menage (A7)'
             }, {
                 field : 'count',
                 displayName : 'No. of Surveys'
@@ -307,6 +343,24 @@
                 displayName : 'No. of Surveys'
             }]
         };
+
+        query.group = 'A7';
+        query.name = 'A7';
+        var a7 = ona.query(query);
+        //$scope.isStatsAvailable(interviewbyDate);
+
+        $scope.a7_data = [];
+        $scope.a7_data = a7;
+        $scope.a7Table = {
+            data : 'a7_data',
+            columnDefs : [{
+                field : 'A7',
+                displayName : 'numero de menage (A7)'
+            }, {
+                field : 'count',
+                displayName : 'No. of Surveys'
+            }]
+        };
     }]);
 
 
@@ -406,6 +460,24 @@
             columnDefs : [{
                 field : 'grappe',
                 displayName : 'Cluster (Village/Quartier avenue /grappes)'
+            }, {
+                field : 'count',
+                displayName : 'No. of Surveys'
+            }]
+        };
+
+        query.group = 'A7';
+        query.name = 'A7';
+        var a7 = ona.query(query);
+        //$scope.isStatsAvailable(interviewbyDate);
+
+        $scope.a7_data = [];
+        $scope.a7_data = a7;
+        $scope.a7Table = {
+            data : 'a7_data',
+            columnDefs : [{
+                field : 'A7',
+                displayName : 'numero de menage (A7)'
             }, {
                 field : 'count',
                 displayName : 'No. of Surveys'

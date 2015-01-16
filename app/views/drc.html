@@ -1,19 +1,19 @@
 
 <div class="container">
 	<br/><br/>
-	<h3 class="area-txt"><i class="glyphicon glyphicon-map-marker"></i> 
+	<h3 class="area-txt"><i class="glyphicon glyphicon-map-marker"></i>
         {{country}} &nbsp;&middot;&nbsp;
         <span class="current-form-header t-normal">{{ current_form }}</span>
     </h3>
 	<br/>
-	
+
     <div class="data-section">
         <ul class="nav nav-tabs show-tablet" id="summarytabs">
             <li><h4>Survey by: </h4></li>
             <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                 <span id="surveyByFilter">Date of Interview</span> <span class="caret"></span>
-                </a> 
+                </a>
                 <ul class="dropdown-menu" id="surveyByOptions">
                     <li class="active"><a href="#dateinterview" data-toggle="tab">Date of Interview</a></li>
                     <li><a href="#byinterviewer" data-toggle="tab">Interviewer</a></li>
@@ -28,6 +28,7 @@
 			<li><a href="#byinterviewer" data-toggle="tab">Survey by Interviewer</a></li>
 			<li><a href="#area" data-toggle="tab">Survey by Aire de Sante</a></li>
 			<li><a href="#cluster" data-toggle="tab">Survey by Cluster</a></li>
+			<li><a href="#a7" data-toggle="tab">Survey Numero de Manage</a></li>
         </ul>
 
         <!-- Tab pane 1 -->
@@ -37,22 +38,28 @@
 					<div ng-grid="interviewDateTable" class="info-table clearfix"></div>
 				</div>
 			</div>
-			
+
 			<div class="tab-pane clearfix" id="byinterviewer">
 				<div class="col-md-6">
 					<div ng-grid="interviewerTable" class="info-table clearfix"></div>
 				</div>
 			</div>
-			
+
 			<div class="tab-pane clearfix" id="area">
 				<div class="col-md-6">
 					<div ng-grid="airesTable" class="info-table clearfix"></div>
 				</div>
 			</div>
-			
+
 			<div class="tab-pane clearfix" id="cluster">
 				<div class="col-md-6">
 					<div ng-grid="clusterTable" class="info-table clearfix"></div>
+				</div>
+			</div>
+
+			<div class="tab-pane clearfix" id="a7">
+				<div class="col-md-6">
+					<div ng-grid="a7Table" class="info-table clearfix"></div>
 				</div>
 			</div>
         </div>
