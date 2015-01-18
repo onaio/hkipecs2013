@@ -25,7 +25,7 @@
 
         // form defaults
         var query = {
-            group: 'today',
+            group: 'Date',
             user : 'hkidrcdata',
             form_pk: 23624,
             site : 'ona.io'
@@ -38,7 +38,7 @@
         $scope.interviewDateTable = {
             data : 'date_interview_data',
             columnDefs : [{
-                field : 'today',
+                field : 'Date',
                 displayName : 'Date of Interview',
                 cellFilter : 'date'
             }, {
@@ -146,7 +146,7 @@
 
         // form defaults
         var query = {
-            group: 'today',
+            group: 'Date',
             user : 'hkidrcdata',
             form_pk: 23616,
             site : 'ona.io'
@@ -159,7 +159,7 @@
         $scope.interviewDateTable = {
             data : 'date_interview_data',
             columnDefs : [{
-                field : 'today',
+                field : 'Date',
                 displayName : 'Date of Interview',
                 cellFilter : 'date'
             }, {
@@ -268,7 +268,7 @@
 
         // form defaults
         var query = {
-            group: 'today',
+            group: 'Date',
             user : 'hkidrcdata',
             form_pk: 23620,
             site : 'ona.io'
@@ -281,7 +281,7 @@
         $scope.interviewDateTable = {
             data : 'date_interview_data',
             columnDefs : [{
-                field : 'today',
+                field : 'Date',
                 displayName : 'Date of Interview',
                 cellFilter : 'date'
             }, {
@@ -390,7 +390,7 @@
 
         // form defaults
         var query = {
-            group: 'today',
+            group: 'Date',
             user : 'hkidrcdata',
             form_pk: 23618,
             site : 'ona.io'
@@ -403,7 +403,7 @@
         $scope.interviewDateTable = {
             data : 'date_interview_data',
             columnDefs : [{
-                field : 'today',
+                field : 'Date',
                 displayName : 'Date of Interview',
                 cellFilter : 'date'
             }, {
